@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ユーザー登録確認</title>
+</head>
+<body>
+
+<h2>ユーザー登録</h2>
+<h3>ユーザー情報確認</h3>
+<form id="userForm" th:action="@{/user/register/do}" th:object="${userRegisterForm}" method="post">
+    <fieldset id="user_field">
+        <div>
+            <label>氏名</label><br/>
+            <span th:text="*{name}"></span>
+        </div>
+        <input type="hidden" name="name" id="name" th:value="*{name}"/>
+        <div >
+            <input type="submit" name="registerBack" value="戻る"/>
+        </div>
+        <div>
+            <input type="submit" name="register" value="登録"/>
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
