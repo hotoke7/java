@@ -39,7 +39,6 @@ public class PolymorphismAndInterface {
             System.out.println("----------おめでとう！Lesson正解です！----------");
         } else {
             System.out.println("----------残念！Lesson不正解です！----------");
-            return;
         }
     }
 }
