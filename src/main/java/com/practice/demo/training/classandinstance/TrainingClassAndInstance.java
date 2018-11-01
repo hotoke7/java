@@ -1,19 +1,25 @@
 package com.practice.demo.training.classandinstance;
 
+import java.util.Map;
+
 public class TrainingClassAndInstance {
 
     public void doTest() {
         // Lesson1
-        // その１：以下のクラスを作成してください。
+        // ■以下のクラスを作成してください。
         // クラス名：Country
-        // その２：Countryクラスに以下のメソッドを作成してください。
-        // setCountryName(String)：引数の文字列を国名としてクラスに保持する。
-        // getCountryName()：クラスに保持している国名を返却する。
-        // その３：Countryクラスのインスタンスを作成してください。
-        // その４：setCountryNameを呼び出し、国名「Japan」を設定してください。
-        // その５：getCountryNameを呼び出し、変数countryNameに格納してください。
-        // その６:TrainingClazzMainクラスを実行して、結果を確かめてください。
-        String countryName = null;
+        // ■Countryクラスに国名を表すクラス変数をString型で定義してください。
+        // ■Countryクラスに以下のメソッドを作成してください。
+        // void setCountryName(String)：引数の文字列を国名としてクラスに保持する。
+        // String getCountryName()：クラスに保持している国名を返却する。
+
+        // ■Countryクラスのインスタンスを作成してください。
+        // ■setCountryNameを呼び出し、国名「Japan」を設定してください。
+        // ■getCountryNameを呼び出し、返却値を変数countryNameに格納してください。
+        // ■TrainingClassMainクラスを実行して、結果を確かめてください。
+        Country country = new Country();
+        country.setCountryName("Japan");
+        String countryName = country.getCountryName();
         if ("Japan".equals(countryName)) {
             System.out.println("----------おめでとう！Lesson1正解です！----------");
         } else {
@@ -22,12 +28,19 @@ public class TrainingClassAndInstance {
         }
 
         // Lesson2
-        // その１：数値を１つ引数に取れるメソッドを作成し、引数に10を加えて返却出来るようにしてください。
-        // その２：lesson2_1を引数にして作成したメソッドを呼び出し、返却された値をlesson2_2に格納してください。
-        // その３:TrainingMethodMainクラスを実行して、結果を確かめてください。
-        int lesson2_1 = 10;
-        int lesson2_2 = addTen(lesson2_1);
-        if (lesson2_2 == 20) {
+        // ■以下のクラスを作成してください。
+        // クラス名：AdditionCalculator
+        // ■AdditionCalculatorクラスに以下のメソッドを作成してください。
+        // int addCalc(int[])：引数の数値配列の中身を全てを足して返却する。
+
+        // ■AdditionCalculatorクラスのインスタンスを作成してください。
+        // ■数値配列を作成し、配列に1,5,10,100を入れてください。
+        // ■addCalcメソッドを作成した数値配列を引数に呼び出し、返却値を変数calcResultに格納してください。
+        // ■TrainingClassMainクラスを実行して、結果を確かめてください。
+        AdditionCalculator calculator = new AdditionCalculator();
+        int[] target = {1, 5, 10, 100};
+        int calcResult = calculator.addCalc(target);
+        if (calcResult == 116) {
             System.out.println("----------おめでとう！Lesson2正解です！----------");
         } else {
             System.out.println("----------残念！Lesson2不正解です！----------");
@@ -35,12 +48,20 @@ public class TrainingClassAndInstance {
         }
 
         // Lesson3
-        // その１：数値を１つ引数に取れるメソッドを作成し、受け取った引数が10以上ならtrue,10未満ならfalseを返却してください。
-        // その２：変数Lesson3_1を引数にしてメソッドを呼び出し、返却された値をlesson3_2に格納してください。
-        // その３:TrainingMethodMainクラスを実行して、結果を確かめてください。
-        int lesson3_1 = 10;
-        boolean lesson3_2 = judgeOver10(lesson3_1);
-        if (lesson3_2) {
+        // ■以下のクラスを作成してください。
+        // クラス名：AreaCodeHolder
+        // ■AreaCodeHolderクラスに以下のメソッドを作成してください。
+        // Map<String, String>getAreaCodes()：市外局番の局番をキー、エリアをバリューとしたMap<String,String>を返却する。
+        // 返却するMapは、以下の３つを入れてください。
+        // 03:東京、0742：奈良、011：札幌
+        // ■getAreaCodesメソッドを呼び出し、返却値を変数areaCodeに格納してください。
+        // ■TrainingClassMainクラスを実行して、結果を確かめてください。
+        AreaCodeHolder holder = new AreaCodeHolder();
+        Map<String, String> areaCode = holder.getAreaCodes();
+        String tokyo = areaCode.get("03");
+        String nara = areaCode.get("0742");
+        String sapporo = areaCode.get("011");
+        if ("東京".equals(tokyo) && "奈良".equals(nara) && "札幌".equals(sapporo)) {
             System.out.println("----------おめでとう！Lesson3正解です！----------");
         } else {
             System.out.println("----------残念！Lesson3不正解です！----------");
@@ -49,21 +70,6 @@ public class TrainingClassAndInstance {
 
         System.out.println("----------おめでとう！全問正解です！----------");
 
-    }
-
-    private String getHello() {
-        return "こんばんわ";
-    }
-
-    private int addTen(int target) {
-        return target + 10;
-    }
-
-    private boolean judgeOver10(int target) {
-        if (target >= 10) {
-            return true;
-        }
-        return false;
     }
 
 
