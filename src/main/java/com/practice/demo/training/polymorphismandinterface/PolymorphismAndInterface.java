@@ -3,7 +3,7 @@ package com.practice.demo.training.polymorphismandinterface;
 public class PolymorphismAndInterface {
 
     public void doTest() {
-        // Lesson1
+        // Lesson
         // ■インターフェースクラス、Snackを作成してください。
         //   Snackインターフェースには、String getSnackName()を定義してください。
         // ■Snackインターフェースの実装クラスとして、KinokonoYamaクラスを実装してください。
@@ -36,11 +36,10 @@ public class PolymorphismAndInterface {
         String takenokoName = takenoko.getSnackName();
 
         if ("きのこの山".equals(kinokoName) && "たけのこの里".equals(takenokoName)) {
-            System.out.println("----------おめでとう！Lesson1正解です！----------");
+            System.out.println("----------おめでとう！Lesson正解です！----------");
         } else {
-            System.out.println("----------残念！Lesson1不正解です！----------");
+            System.out.println("----------残念！Lesson不正解です！----------");
             return;
         }
-        System.out.println("----------おめでとう！全問正解です！----------");
     }
 }
