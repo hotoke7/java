@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /**
- * ユーザ登録フォーム。
+ * ユーザー登録フォーム。
  */
 public class UserRegisterForm {
 

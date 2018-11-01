@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *  * ユーザ登録サービス。
+ *  * ユーザー登録サービス。
  */
 @Service
 public class UserRegisterService {
 
-    /** ユーザリポジトリ */
+    /** ユーザーリポジトリ */
     private final UserRepository userRepository;
 
     @Autowired
@@ -23,7 +23,7 @@ public class UserRegisterService {
     /**
      * 登録処理。
      *
-     * @param user     登録対象のユーザ
+     * @param user     登録対象のユーザー
      */
     @Transactional
     public void register( User user) {

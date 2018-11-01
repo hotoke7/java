@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * ユーザ登録コントローラ。
+ * ユーザー登録コントローラ。
  */
 @Controller
 @RequestMapping(value = "/user/register")
 public class UserRegisterController {
 
-    /** ユーザ登録サービス */
+    /** ユーザー登録サービス */
     private final UserRegisterService service;
 
     @Autowired
@@ -26,52 +26,52 @@ public class UserRegisterController {
     }
 
     /**
-     * ユーザ登録-初期表示。
+     * ユーザー登録-初期表示。
      *
-     * @param userRegisterForm ユーザ登録フォーム
+     * @param userRegisterForm ユーザー登録フォーム
      * @return Path
      */
     @RequestMapping(value = "/init")
     String registerInit(@ModelAttribute UserRegisterForm userRegisterForm) {
-        return "user/userRegisterForm";
+        return "userRegisterForm";
     }
 
     /**
-     * ユーザ登録-確認画面表示。
+     * ユーザー登録-確認画面表示。
      *
      * @param userRegisterForm 精査済みフォーム
      * @return Path
      */
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
     String registerConfirm(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
-        return "user/userRegisterConfirmForm";
+        return "userRegisterConfirmForm";
     }
 
     /**
-     * ユーザ登録-完了画面表示。
+     * ユーザー登録-完了画面表示。
      *
      * @param userRegisterForm 精査済みフォーム
      * @return Path
      */
     @RequestMapping(value = "/do", params = "register", method = RequestMethod.POST)
     String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
-        // 登録するユーザの作成
+        // 登録するユーザーの作成
         User user = new User();
         user.setName(userRegisterForm.getName());
-        // ユーザの登録
+        // ユーザーの登録
         service.register(user);
-        return "user/userRegisterCompleteForm";
+        return "userRegisterCompleteForm";
     }
 
     /**
-     * ユーザ登録-入力画面に戻る。
+     * ユーザー登録-入力画面に戻る。
      *
-     * @param userRegisterForm ユーザ登録フォーム。
+     * @param userRegisterForm ユーザー登録フォーム。
      * @return Path
      */
     @RequestMapping(value = "/do", params = "registerBack", method = RequestMethod.POST)
     String registerBack(@ModelAttribute UserRegisterForm userRegisterForm) {
-        return "user/userRegisterForm";
+        return "userRegisterForm";
     }
 
 }

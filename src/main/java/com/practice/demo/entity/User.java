@@ -4,7 +4,7 @@ package com.practice.demo.entity;
 import javax.persistence.*;
 
 /**
- * ユーザエンティティ。
+ * ユーザーエンティティ。
  */
 @Entity
 @Table(name = "users")
