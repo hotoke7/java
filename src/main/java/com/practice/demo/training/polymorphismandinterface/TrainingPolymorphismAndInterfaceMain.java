@@ -1,8 +1,8 @@
 package com.practice.demo.training.polymorphismandinterface;
 
-public class PolymorphismAndInterfaceMain {
+public class TrainingPolymorphismAndInterfaceMain {
 
     public static void main(String[] args) {
-        new PolymorphismAndInterface().doTest();
+        new TrainingPolymorphismAndInterface().doTest();
     }
 }

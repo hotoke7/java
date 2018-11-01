@@ -1,6 +1,6 @@
 package com.practice.demo.training.polymorphismandinterface;
 
-public class PolymorphismAndInterface {
+public class TrainingPolymorphismAndInterface {
 
     public void doTest() {
         // Lesson
