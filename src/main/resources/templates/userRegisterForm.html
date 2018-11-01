@@ -10,8 +10,7 @@
 <form id="userForm" th:action="@{/user/register/confirm}" th:object="${userRegisterForm}" method="post">
     <fieldset id="user_field">
             <label for="name">氏名</label><br/>
-            <input id="name" type="text" maxlength="45" th:field="*{name}" name="name" required
-                   placeholder="氏名を入力してください"/>
+            <input id="name" type="text" maxlength="45" th:field="*{name}" name="name" required placeholder="氏名を入力してください"/>
         <div>
             <input type="submit" value="確認画面へ"/>
         </div>
