@@ -1,5 +1,8 @@
 package com.practice.demo.training.method;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrainingMethod {
 
     public void doTest() {
@@ -41,6 +44,60 @@ public class TrainingMethod {
             return;
         }
 
+        // Lesson4
+        // ■数値を2つ引数に取れるメソッドをこのクラス内に作成し、受け取った引数を乗算して返却してください。
+        // ■変数Lesson4_1,4_2を引数にしてメソッドを呼び出し、返却された値をlesson4_3に格納してください。
+        // ■TrainingMethodMainクラスを実行して、結果を確かめてください。
+        int lesson4_1 = 10;
+        int lesson4_2 = 5;
+        int lesson4_3 = multiple(lesson4_1,lesson4_2);
+        if (lesson4_3 == 50) {
+            System.out.println("----------おめでとう！Lesson4正解です！----------");
+        } else {
+            System.out.println("----------残念！Lesson4不正解です！----------");
+            return;
+        }
+
+        // Lesson5
+        // ■文字列型の可変長引数（引数の個数が不定）を受け取れるメソッドをこのクラス内に作成してください。
+        //   受け取った引数を全て数値型に変換し、足したものを数値型として返却してください。
+        // ■変数lesson5_1,5_2,5_3を引数にしてメソッドを呼び出し、返却された値をlesson5_4に格納してください。
+        //   受け取った引数を全て数値型に変換し、足したものを返却してください。
+        // ■TrainingMethodMainクラスを実行して、結果を確かめてください。
+        String lesson5_1 = "5";
+        String lesson5_2 = "10";
+        String lesson5_3 = "100";
+        int lesson5_4 = variableArgument(lesson5_1, lesson5_2, lesson5_3);
+        if (lesson5_4 == 115) {
+            System.out.println("----------おめでとう！Lesson5正解です！----------");
+        } else {
+            System.out.println("----------残念！Lesson5不正解です！----------");
+            return;
+        }
+
+        // Lesson6
+        // ■List<String>を引数に受け取れるメソッドをこのクラス内に作成してください。
+        //   受け取ったListの要素を全て文字列連結し、文字列型として返却してください。
+        // ■変数lesson6_1,6_2,6_3を全てListに格納し引数にしてメソッドを呼び出し、返却された値をlesson6_4に格納してください。
+        //   受け取った引数を全て数値型に変換し、足したものを返却してください。
+        // ■TrainingMethodMainクラスを実行して、結果を確かめてください。
+        String lesson6_1 = "あいう";
+        String lesson6_2 = "え";
+        String lesson6_3 = "お";
+        List<String> list = new ArrayList<>();
+        list.add(lesson6_1);
+        list.add(lesson6_2);
+        list.add(lesson6_3);
+
+        String lesson6_4 = concatString(list);
+
+        if ("あいうえお".equals(lesson6_4)) {
+            System.out.println("----------おめでとう！Lesson6正解です！----------");
+        } else {
+            System.out.println("----------残念！Lesson6不正解です！----------");
+            return;
+        }
+
         System.out.println("----------おめでとう！全問正解です！----------");
 
     }
@@ -60,5 +117,24 @@ public class TrainingMethod {
         return false;
     }
 
+    private int multiple(int a, int b) {
+        return a * b;
+    }
+
+    private int variableArgument(String... values) {
+        int result = 0;
+        for (String value : values) {
+            result = result + Integer.valueOf(value);
+        }
+        return result;
+    }
+
+    private String concatString(List<String> concatTarget) {
+        String result = "";
+        for (String tar:concatTarget) {
+            result = result + tar;
+        }
+        return result;
+    }
 
 }
