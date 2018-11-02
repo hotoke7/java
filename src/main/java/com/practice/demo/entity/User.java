@@ -18,7 +18,6 @@ public class User {
     @Column(name = "name", nullable = false)
     private String name;
 
-    //Getter, Setter
     public int getId() {
         return id;
     }

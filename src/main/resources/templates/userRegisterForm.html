@@ -7,10 +7,10 @@
 
 <h2>ユーザー登録</h2>
 <h3>ユーザー情報入力</h3>
-<form id="userForm" th:action="@{/user/register/confirm}" th:object="${userRegisterForm}" method="post">
+<form id="userForm" method="post" th:action="@{/user/register/confirm}" th:object="${userRegisterForm}">
     <fieldset id="user_field">
-            <label for="name">氏名</label><br/>
-            <input id="name" type="text" maxlength="45" th:field="*{name}" name="name" required placeholder="氏名を入力してください"/>
+        <label for="name">氏名</label><br/>
+        <input id="name" type="text" maxlength="45" th:field="*{name}" name="name" required placeholder="氏名を入力してください"/>
         <div>
             <input type="submit" value="確認画面へ"/>
         </div>

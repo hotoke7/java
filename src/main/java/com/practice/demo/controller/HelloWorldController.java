@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * HelloWorldコントローラ。
  */
 @Controller
-@RequestMapping("/helloWorld")
 public class HelloWorldController {
 
-    @RequestMapping(value="")
+    @RequestMapping("/helloWorld")
     public String hello() {
         return "helloWorldForm";
     }
