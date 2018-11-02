@@ -55,11 +55,8 @@ public class UserRegisterController {
      */
     @RequestMapping(value = "/do", params = "register", method = RequestMethod.POST)
     String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
-        // 登録するユーザーの作成
-        User user = new User();
-        user.setName(userRegisterForm.getName());
         // ユーザーの登録
-        service.register(user);
+        service.register(userRegisterForm);
         return "userRegisterCompleteForm";
     }
 

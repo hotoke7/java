@@ -10,10 +10,11 @@
 <form id="userForm" method="post" th:action="@{/user/register/do}" th:object="${userRegisterForm}">
     <fieldset id="user_field">
         <div>
-            <label>氏名</label><br/>
-            <span th:text="*{name}"></span>
+            <label>名前</label><br/>
+            <span th:text="*{fmailyName}"></span>&nbsp;<span th:text="*{givenName}"></span>
         </div>
-        <input type="hidden" name="name" id="name" th:value="*{name}"/>
+        <input type="hidden" name="fmailyName" id="fmailyName" th:value="*{fmailyName}"/>
+        <input type="hidden" name="givenName" id="givenName" th:value="*{givenName}"/>
         <div>
             <input type="submit" name="registerBack" value="戻る"/>
             <input type="submit" name="register" value="登録"/>
