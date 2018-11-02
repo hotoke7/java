@@ -11,11 +11,13 @@
     <fieldset id="user_field">
         <div>
             <label for="family">姓</label><br/>
-            <input id="family" type="text" maxlength="45" th:field="*{familyName}" name="name" required placeholder="姓を入力してください"/>
+            <input id="family" type="text" maxlength="50" th:field="*{familyName}" name="familyName" required placeholder="姓を入力してください"/>
+            <span class="text-danger" th:if="${#fields.hasErrors('familyName')}" th:errors="*{familyName}">error!</span>
         </div>
         <div>
             <label for="given">名</label><br/>
-            <input id="given" type="text" maxlength="45" th:field="*{givenName}" name="name" required placeholder="名を入力してください"/>
+            <input id="given" type="text" maxlength="45" th:field="*{givenName}" name="givenName" required placeholder="名を入力してください"/>
+            <span class="text-danger" th:if="${#fields.hasErrors('givenName')}" th:errors="*{givenName}">error!</span>
         </div>
         <div>
             <input type="submit" value="確認画面へ"/>
