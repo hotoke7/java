@@ -10,18 +10,18 @@ public class UserRegisterForm {
 
     @NotBlank
     @Size(max = 45, message = "{error.size.max}")
-    private String fmailyName;
+    private String familyName;
 
     @NotBlank
     @Size(max = 45, message = "{error.size.max}")
     private String givenName;
 
-    public String getFmailyName() {
-        return fmailyName;
+    public String getFamilyName() {
+        return familyName;
     }
 
-    public void setFmailyName(String fmailyName) {
-        this.fmailyName = fmailyName;
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
     }
 
     public String getGivenName() {

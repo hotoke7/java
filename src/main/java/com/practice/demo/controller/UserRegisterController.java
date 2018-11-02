@@ -32,7 +32,7 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/init")
-    String registerInit(@ModelAttribute UserRegisterForm userRegisterForm) {
+    public String registerInit(@ModelAttribute UserRegisterForm userRegisterForm) {
         return "userRegisterForm";
     }
 
@@ -43,7 +43,7 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
-    String registerConfirm(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
+    public String registerConfirm(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
         return "userRegisterConfirmForm";
     }
 
@@ -54,7 +54,7 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/do", params = "register", method = RequestMethod.POST)
-    String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
+    public String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
         // ユーザーの登録
         service.register(userRegisterForm);
         return "userRegisterCompleteForm";
@@ -67,7 +67,7 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/do", params = "registerBack", method = RequestMethod.POST)
-    String registerBack(@ModelAttribute UserRegisterForm userRegisterForm) {
+    public String registerBack(@ModelAttribute UserRegisterForm userRegisterForm) {
         return "userRegisterForm";
     }
 

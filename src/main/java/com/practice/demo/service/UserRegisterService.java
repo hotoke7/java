@@ -29,7 +29,7 @@ public class UserRegisterService {
     @Transactional
     public void register(UserRegisterForm form) {
         User user = new User();
-        user.setName(form.getFmailyName() + " "+ form.getGivenName());
+        user.setName(form.getFamilyName() + " "+ form.getGivenName());
         userRepository.save(user);
     }
 

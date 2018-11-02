@@ -11,9 +11,9 @@
     <fieldset id="user_field">
         <div>
             <label>名前</label><br/>
-            <span th:text="*{fmailyName}"></span>&nbsp;<span th:text="*{givenName}"></span>
+            <span th:text="*{familyName}"></span>&nbsp;<span th:text="*{givenName}"></span>
         </div>
-        <input type="hidden" name="fmailyName" id="fmailyName" th:value="*{fmailyName}"/>
+        <input type="hidden" name="familyName" id="familyName" th:value="*{familyName}"/>
         <input type="hidden" name="givenName" id="givenName" th:value="*{givenName}"/>
         <div>
             <input type="submit" name="registerBack" value="戻る"/>
