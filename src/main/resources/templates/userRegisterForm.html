@@ -11,7 +11,7 @@
     <fieldset id="user_field">
         <div>
             <label for="family">姓</label><br/>
-            <input id="family" type="text" maxlength="50" th:field="*{familyName}" name="familyName" required placeholder="姓を入力してください"/>
+            <input id="family" type="text" maxlength="45" th:field="*{familyName}" name="familyName" required placeholder="姓を入力してください"/>
             <span class="text-danger" th:if="${#fields.hasErrors('familyName')}" th:errors="*{familyName}">error!</span>
         </div>
         <div>

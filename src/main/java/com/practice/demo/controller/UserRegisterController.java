@@ -66,7 +66,7 @@ public class UserRegisterController {
         }
         // ユーザーの登録
         service.register(userRegisterForm);
-        model.addAttribute("Key","ユーザー登録が完了しました。");
+        model.addAttribute("completeMessage","ユーザー登録が完了しました。");
         return "userRegisterCompleteForm";
     }
 
