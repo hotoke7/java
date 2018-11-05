@@ -9,11 +9,11 @@ import javax.validation.constraints.Size;
 public class UserRegisterForm {
 
     @NotBlank
-    @Size(max = 45, message = "{error.size.max}")
+    @Size(max = 45)
     private String familyName;
 
     @NotBlank
-    @Size(max = 45, message = "{error.size.max}")
+    @Size(max = 45)
     private String givenName;
 
     public String getFamilyName() {

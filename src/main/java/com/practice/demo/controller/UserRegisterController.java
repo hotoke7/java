@@ -1,10 +1,11 @@
 package com.practice.demo.controller;
 
-import com.practice.demo.entity.User;
 import com.practice.demo.form.UserRegisterForm;
 import com.practice.demo.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +44,11 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
-    public String registerConfirm(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
+    public String registerConfirm(@ModelAttribute @Validated UserRegisterForm userRegisterForm, BindingResult bindingResult) {
+        // BeanValidationのエラー確認
+        if (bindingResult.hasErrors()) {
+            return "userRegisterForm";
+        }
         return "userRegisterConfirmForm";
     }
 
@@ -54,9 +59,14 @@ public class UserRegisterController {
      * @return Path
      */
     @RequestMapping(value = "/do", params = "register", method = RequestMethod.POST)
-    public String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm) {
+    public String registerComplete(@ModelAttribute @Validated UserRegisterForm userRegisterForm, BindingResult bindingResult, Model model) {
+        // BeanValidationのエラー確認
+        if (bindingResult.hasErrors()) {
+            return "userRegisterForm";
+        }
         // ユーザーの登録
         service.register(userRegisterForm);
+        model.addAttribute("completeMessage","ユーザー登録が完了しました。");
         return "userRegisterCompleteForm";
     }
 
