@@ -1,6 +1,5 @@
 package com.practice.demo.controller;
 
-import com.practice.demo.entity.User;
 import com.practice.demo.form.UserRegisterForm;
 import com.practice.demo.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
