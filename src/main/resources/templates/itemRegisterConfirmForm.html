@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>商品登録確認</title>
+</head>
+<body>
+
+<h2>商品登録</h2>
+<h3>商品情報確認</h3>
+<form id="itemForm" method="post" th:action="@{/item/register/do}" th:object="${itemRegisterForm}">
+    <fieldset id="item_field">
+        <div>
+            <label>商品名</label><br/>
+            <span th:text="*{name}"></span>
+        </div>
+        <div>
+            <label>値段</label><br/>
+            <span th:text="*{price}"></span>
+        </div>
+        <input type="hidden" name="name" id="name" th:value="*{name}"/>
+        <input type="hidden" name="price" id="price" th:value="*{price}"/>
+        <div>
+            <input type="submit" name="registerBack" value="戻る"/>
+            <input type="submit" name="register" value="登録"/>
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>

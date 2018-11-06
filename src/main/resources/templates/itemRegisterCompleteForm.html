@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>商品登録完了</title>
+</head>
+<body>
+
+<h2>商品登録</h2>
+<h3>商品登録完了</h3>
+<div th:object="${completeMessage}"></div>
+<form id="itemForm" method="get" th:action="@{/item/register/init}">
+    <div>
+        <input type="submit" value="商品登録画面へ"/>
+    </div>
+</form>
+
+</body>
+</html>
