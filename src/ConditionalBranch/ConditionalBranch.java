@@ -3,7 +3,7 @@ package ConditionalBranch;
 public class ConditionalBranch {
     public static void main(String[] args) {
 
-        // Lesson 条件分岐
+        // Lesson Java基礎③（条件分岐）
         // 【問題】2019/2020年のうるう年の判定をしてください。
         // 出力結果：
         // 2019年は、うるう年ではありません。
