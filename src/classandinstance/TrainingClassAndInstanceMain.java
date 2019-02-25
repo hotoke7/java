@@ -1,4 +1,4 @@
-package com.practice.demo.training.classandinstance;
+package classandinstance;
 
 public class TrainingClassAndInstanceMain {
 

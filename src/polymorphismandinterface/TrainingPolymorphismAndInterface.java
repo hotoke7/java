@@ -1,4 +1,4 @@
-package com.practice.demo.training.polymorphismandinterface;
+package polymorphismandinterface;
 
 public class TrainingPolymorphismAndInterface {
 

@@ -1,4 +1,4 @@
-package com.practice.demo.training.method;
+package method;
 
 public class TrainingMethodMain {
 

@@ -1,4 +1,4 @@
-package com.practice.demo.training.method;
+package method;
 
 import java.util.ArrayList;
 import java.util.List;
