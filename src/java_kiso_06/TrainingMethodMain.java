@@ -1,4 +1,4 @@
-package method;
+package java_kiso_06;
 
 public class TrainingMethodMain {
 

@@ -1,4 +1,4 @@
-package method;
+package java_kiso_06;
 
 import java.util.ArrayList;
 import java.util.List;

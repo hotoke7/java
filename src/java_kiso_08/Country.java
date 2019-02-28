@@ -1,4 +1,4 @@
-package classandinstance;
+package java_kiso_08;
 
 public class Country {
 
