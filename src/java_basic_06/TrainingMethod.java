@@ -1,4 +1,4 @@
-package java_kiso_06;
+package java_basic_06;
 
 import java.util.ArrayList;
 import java.util.List;

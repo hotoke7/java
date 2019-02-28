@@ -1,4 +1,4 @@
-package java_kiso_10;
+package java_basic_10;
 
 public class TakenokonoSatoFactory implements SnackFactory{
     @Override

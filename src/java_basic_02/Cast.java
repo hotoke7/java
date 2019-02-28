@@ -1,4 +1,4 @@
-package java_kiso_02;
+package java_basic_02;
 
 public class Cast {
     public static void main(String[] args) {

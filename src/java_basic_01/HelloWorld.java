@@ -1,4 +1,4 @@
-package java_kiso_01;
+package java_basic_01;
 
 public class HelloWorld {
     public static void main(String[] args) {

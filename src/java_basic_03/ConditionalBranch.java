@@ -1,4 +1,4 @@
-package java_kiso_03;
+package java_basic_03;
 
 public class ConditionalBranch {
     public static void main(String[] args) {

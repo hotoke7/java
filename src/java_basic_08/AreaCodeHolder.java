@@ -1,4 +1,4 @@
-package java_kiso_08;
+package java_basic_08;
 
 import java.util.HashMap;
 import java.util.Map;

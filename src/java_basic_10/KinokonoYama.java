@@ -1,4 +1,4 @@
-package java_kiso_10;
+package java_basic_10;
 
 public class KinokonoYama implements Snack{
     @Override
