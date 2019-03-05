@@ -2,13 +2,11 @@ package java_basic_02;
 
 public class Cast {
     public static void main(String[] args) {
-        //小数から整数へキャスト
-        System.out.println((int)10.8);
-        //演算結果をキャスト(小数点切捨て)
-        System.out.println((int)(13800 * 1.08));
-        //数値をchar型へキャスト
-        int a = 97;
-        System.out.println((char)a);
+        // Lesson Java基礎②（変数/型/キャスト）
+        // 小数から整数へキャスト
+        // ■ 小数点型の変数「x」を宣言して、10.12345を代入してください。
+        double x = 10.12345;
+        // ■ xを整数型にキャストし、処理結果を出力してください。
+        System.out.println((int)x);
     }
-
 }
