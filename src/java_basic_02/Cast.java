@@ -8,5 +8,4 @@ public class Cast {
         // xが整数型の10になるように出力してください
         System.out.println((int)x);
     }
-
 }
