@@ -6,7 +6,7 @@ public class Cast {
         // 小数から整数へキャスト
         double x = 10.12345;
         // xが整数型の10になるように出力してください
-        System.out.println();
+        System.out.println((int)x);
     }
 
 }
