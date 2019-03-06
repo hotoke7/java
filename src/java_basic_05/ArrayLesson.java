@@ -26,8 +26,7 @@ public class ArrayLesson {
         alcoholOrder[3] = "黒ホッピー";
         alcoholOrder[4] = "レモンサワー";
 
-        // ■ 予想した結果が出るように、配列を順次出力してください。
-        // Hint : 「i」は0から始まるので、～杯目を出力するには「+1」をしないといけません。
+        // ■ 想定する結果が出るように、標準出力をしてください。
         for (int i = 0; i < alcoholOrder.length; i++) {
             System.out.println((i + 1) + "杯目は、" + alcoholOrder[i] + "を飲みました。");
         }
