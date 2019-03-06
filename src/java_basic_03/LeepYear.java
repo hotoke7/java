@@ -30,11 +30,5 @@ public class LeepYear {
             System.out.println(year + "年は、うるう年ではありません。");
         }
 
-
-
-
-
-
-
     }
 }
