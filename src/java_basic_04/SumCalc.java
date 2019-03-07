@@ -1,7 +1,7 @@
 package java_basic_04;
 
 public class SumCalc {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Lesson Java基礎④（繰り返し）
         // 結果格納用の変数を宣言する
@@ -15,7 +15,7 @@ public class SumCalc {
         // ■ 結果格納用変数の宣言してください。
         int result = 0;
         // ■ 繰り返し処理を記述してください。
-        for(int i=1;i<=100;i++){
+        for (int i = 1; i <= 100; i++) {
             result += i;
             // 以下の記述でも可
             // result = result + i;
