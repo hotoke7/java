@@ -6,44 +6,33 @@ public class MethodLessonTwo {
     public static void main(String[] args) {
         // Lesson Java基礎⑥（メソッド）
         // 【問題２】以下の動作をする機能を作成してください
-        // 1．数字を入力すると、1から入力した数字までの数字を全部出力する
-        // 2．その中、「3」と「5」の倍数は数字の代わりに"Rakuten!"を出力する
-        // 3．以下の動作をするメソッドを作成、利用してください。
-        //　・メソッド１
-        // 　　：数字を引数でもらい、数字が3の倍数、5の倍数ならTRUEを、そうではない場合はFALSEを返却する。
-        //　・メソッド２
-        // 　　：数字とメソッド１の結果を引数でもらい、メソッド１の結果がTRUEだったら「RAKUTEN!」を、そうではない場合は数字を返却する。
+        // ・数字を入力すると、1から入力した数字までのすべての数字を出力する
+        // ・「3または5の倍数」の場合、数字の代わりに"Rakuten!"を出力する
         // 出力結果：
-        // 1
-        // 2
-        // Rakuten!
-        // 4
-        // Rakuten!
-        // ...
+        //   1
+        //   2
+        //   Rakuten!
+        //   4
+        // 　Rakuten!
+        // 　...
 
+        // 標準入力
         Scanner sc = new Scanner(System.in);
-        System.out.print("数字を入力してください。\n：");
-        int number = sc.nextInt();
+        System.out.print("数字を入力してください。\n："); //「\n」は改行文字です。
+        int number = sc.nextInt(); // 入力された数字は、変数「number」に収納されます
 
-        // ■ メソッド１、メソッド２を利用し、機能を作成してください。
-        // 1から入力値までを繰り返します。
-        for (int i = 1; i <= number; i++){
-            // ■ メソッド１を呼び出してください。
-            boolean checkMultipleRes = checkMultiple(i);
-
-            // ■ メソッド２を呼び出してください。
-            String checkRakutenRes = checkRakuten(i, checkMultipleRes);
-
-            // ■ メソッド２の結果を出力してください。
-            System.out.println(checkRakutenRes);
+        // ■ 作成したメソッド１、２を利用し、問題２の機能を作成してください
+        for (int i = 1; i <= number; i++){ // 1から入力値までを繰り返します
+            boolean checkMultipleRes = checkMultiple(i); // メソッド１呼び出し
+            String checkRakutenRes = checkRakuten(i, checkMultipleRes); // メソッド２呼び出し
+            System.out.println(checkRakutenRes); // 結果出力
         }
     }
 
-    // ■ メソッド１：引数をもらい、値を返却するメソッドを作成してください
-    // 数字を引数でもらい、数字が3の倍数、5の倍数ならTRUEを、そうではない場合はFALSEを返却する。
-    // このメソッドは以下の値を返却します。
-    // 返却値：TRUE、FALSE
-    // Hint：MethodLessonOneで使った「%」を利用します。
+    // ■ メソッド１
+    // 以下の動作をするメソッドを作成してください
+    // 引数として数字をもらい、数字が「3または5の倍数」ならTRUEを、そうではない場合はFALSEを返却する
+    // 返却値：true　または　false
     public static boolean checkMultiple(int num){
         if (num % 3 == 0) {
             return true;
@@ -54,11 +43,10 @@ public class MethodLessonTwo {
         }
     }
 
-    // ■ メソッド２：引数をもらい、値を返却するメソッドを作成してください
-    // 数字とメソッド１の結果を引数でもらい、メソッド１の結果がTRUEだったら「RAKUTEN!」を、そうではない場合は数字を返却する。
-    // このメソッドは以下の値を返却します。
-    // 返却値："Rakuten!"、引数の数字
-    // Hint : 返却値はStringなので、引数の数字を返却するにはキャストが必要です。
+    // ■ メソッド２
+    // 以下の動作をするメソッドを作成してください
+    // 引数として数字と真偽値をもらい、真偽値が「true」だったら「RAKUTEN!」を、そうではない場合は数字を返却する
+    // 返却値："Rakuten!"　または　引数の数字
     public static String checkRakuten(int num, boolean res){
         if (res) {
             return "Rakuten!";
