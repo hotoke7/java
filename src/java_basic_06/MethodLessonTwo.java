@@ -21,7 +21,7 @@ public class MethodLessonTwo {
         int number = sc.nextInt();
 
         // 3．機能作成
-        // ■ 作成したメソッド１、２を利用し、問題２の機能を作成してください
+        // ■ 作成したメソッド①、②を利用し、問題２の機能を作成してください
         for (int i = 1; i <= number; i++){
             // メソッド①・②を呼び出し、結果をconvertResultに収納
             String convertResult = convertRakuten(i, isMultiple(i));
