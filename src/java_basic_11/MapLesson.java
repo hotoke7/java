@@ -19,7 +19,6 @@ public class MapLesson {
         // true
         System.out.println(pets.isEmpty());
 
-
         // Activityに使うPetクラスのインスタンスです。
         Pet kotarou = new Pet("コタロウ", 2);
         Pet tama = new Pet("タマ", 1);
