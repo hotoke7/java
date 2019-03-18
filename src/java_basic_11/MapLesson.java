@@ -33,9 +33,9 @@ public class MapLesson {
 
         // ■ マップが空か判定し、空ではない場合、マップの要素数を標準出力してください。
         // 出力結果：
-        // マップのサイズ：3
+        // 3
         if (!pets.isEmpty()) {
-            System.out.println("マップのサイズ：" + pets.size());
+            System.out.println(pets.size());
         }
 
         // ■ マップから「dog」キーに対応する値を取得し、sleepメソッドを呼び出してください。
