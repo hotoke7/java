@@ -38,7 +38,7 @@ public class StringLesson {
 
         // ■ 宣言した文字列から最初の5桁と最後の5桁を切り出し、変数に収納してください。
         String loremA = lorem.substring(0, 5);
-        String loremB = lorem.substring(27, 32);
+        String loremB = lorem.substring(lorem.length() - 5);
 
         // ■ 二つの文字列の比較結果を標準出力してください。
         // 出力結果：
