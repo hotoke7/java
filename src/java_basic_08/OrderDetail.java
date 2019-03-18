@@ -1,18 +1,18 @@
 package java_basic_08;
 
 public class OrderDetail {
-    private String name;
+    private String productName;
     private int price;
     private int qty;
 
-    public OrderDetail(String name, int price, int qty) {
-        this.name = name;
+    public OrderDetail(String productName, int price, int qty) {
+        this.productName = productName;
         this.price = price;
         this.qty = qty;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
     public int getPrice() {

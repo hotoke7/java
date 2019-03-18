@@ -1,22 +1,26 @@
 package java_basic_08;
 
 public class Receipt {
-    private String title;
     private String shopName;
+    private String address;
     private OrderDetail[] orderDetail;
 
-    public Receipt(String title, String shopName, OrderDetail[] orderDetail) {
-        this.title = title;
+    public Receipt(String shopName, String address, OrderDetail[] orderDetail) {
         this.shopName = shopName;
+        this.address = address;
         this.orderDetail = orderDetail;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public String getShopName() {
         return shopName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public OrderDetail[] getOrderDetail() {
+        return orderDetail;
     }
 
     public int getTotalPrice() {
