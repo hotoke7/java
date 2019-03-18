@@ -23,7 +23,7 @@ public class ClassLesson {
                 new OrderDetail("ボトルマッコリ", 1500, 3),
                 new OrderDetail("冷麺", 1100, 2)
         };
-        DrinkSession wrapParty = new DrinkSession("打ち上げ", "焼肉ハンガン", wrapPartyDetail);
+        Receipt wrapParty = new Receipt("打ち上げ", "焼肉ハンガン", wrapPartyDetail);
 
         // ② 歓迎会
         // タイトル：歓迎会
@@ -41,10 +41,10 @@ public class ClassLesson {
                 new OrderDetail("トマトとツナのサラダ", 800, 2),
                 new OrderDetail("飲み放題2h", 1980, 4),
         };
-        DrinkSession welcomeParty = new DrinkSession("歓迎会", "イタリアンQuattro", welcomePartyDetail);
+        Receipt welcomeParty = new Receipt("歓迎会", "イタリアンQuattro", welcomePartyDetail);
 
         // ■ 二つのインスタンスを一回の操作で確認するため、配列を宣言してインスタンスを収納してください。
-        DrinkSession[] drinkSessions = {wrapParty, welcomeParty};
+        Receipt[] receipts = {wrapParty, welcomeParty};
 
         // 2．インスタンスの値取得＆メソッド呼び出し
         // ■ 各インスタンスの内容を取得し、標準出力してください。
@@ -58,11 +58,11 @@ public class ClassLesson {
         // 場所：イタリアンQuattro
         // 総額：16970円
         // ======================================
-        for (int i = 0; i < drinkSessions.length; i++){
-            DrinkSession drinkSession = drinkSessions[i];
-            System.out.println("タイトル：" + drinkSession.getTitle());
-            System.out.println("場所：" + drinkSession.getShopName());
-            System.out.println("総額：" + drinkSession.getTotalPrice() + "円");
+        for (int i = 0; i < receipts.length; i++) {
+            Receipt receipt = receipts[i];
+            System.out.println("タイトル：" + receipt.getTitle());
+            System.out.println("場所：" + receipt.getShopName());
+            System.out.println("総額：" + receipt.getTotalPrice() + "円");
             System.out.println("======================================");
         }
     }

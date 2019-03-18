@@ -1,11 +1,11 @@
 package java_basic_08;
 
-public class DrinkSession {
+public class Receipt {
     private String title;
     private String shopName;
     private OrderDetail[] orderDetail;
 
-    public DrinkSession(String title, String shopName, OrderDetail[] orderDetail){
+    public Receipt(String title, String shopName, OrderDetail[] orderDetail) {
         this.title = title;
         this.shopName = shopName;
         this.orderDetail = orderDetail;
@@ -19,9 +19,9 @@ public class DrinkSession {
         return shopName;
     }
 
-    public int getTotalPrice(){
+    public int getTotalPrice() {
         int totalPrice = 0;
-        for (int i = 0; i < orderDetail.length; i++){
+        for (int i = 0; i < orderDetail.length; i++) {
             OrderDetail detail = orderDetail[i];
             totalPrice += detail.getPrice() * detail.getQty();
         }

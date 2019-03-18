@@ -5,11 +5,15 @@ public class OrderDetail {
     private int price;
     private int qty;
 
-   public OrderDetail (String name, int price, int qty){
-       this.name = name;
-       this.price = price;
-       this.qty = qty;
-   }
+    public OrderDetail(String name, int price, int qty) {
+        this.name = name;
+        this.price = price;
+        this.qty = qty;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public int getPrice() {
         return price;
