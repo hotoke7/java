@@ -37,7 +37,7 @@ public class MapLesson {
             System.out.println(pets.size());
         }
 
-        // ■ マップから「dog」キーに対応する値を取得し、sleepメソッドを呼び出してください。
+        // ■ マップから「dog」キーに対応する値を取得し、intruduceメソッドを呼び出してください。
         // 実行結果：
         // コタロウです。2才です。
         pets.get("dog").intruduce();

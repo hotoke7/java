@@ -19,7 +19,7 @@ public class ListLesson {
         System.out.println(pets.isEmpty());
 
         // Activityに使うPetクラスのインスタンスです。
-        Pet dog = new Pet("コタロウ",2);
+        Pet dog = new Pet("コタロウ", 2);
         Pet cat = new Pet("タマ", 1);
 
         // ■ 作成したリストに上記のインスタンスを追加してください。
@@ -33,7 +33,7 @@ public class ListLesson {
             System.out.println(pets.size());
         }
 
-        // ■ 拡張for文を使って、リストに収納されている全てのインスタンスでsleepメソッドを呼び出してください。
+        // ■ 拡張for文を使って、リストに収納されている全てのインスタンスでintruduceメソッドを呼び出してください。
         // 実行結果：
         // コタロウです。2才です。
         // タマです。1才です。

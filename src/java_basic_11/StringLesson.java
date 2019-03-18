@@ -18,26 +18,31 @@ public class StringLesson {
         System.out.println("lunch : " + lunch.length());
         System.out.println("dinner : " + dinner.length());
 
-        // ■ 以下の文字列を宣言し、年月日を別々で切り出して標準出力してください。
+        // ■ 以下の文字列を宣言してください。
         // 2019/05/14
+        String dateString = "2019/05/14";
+
+        // ■ 宣言した文字列から年月日を別々で切り出して標準出力してください。
         // 出力結果：
         // 2019
         // 05
         // 14
-        String dateString = "2019/05/14";
         System.out.println(dateString.substring(0, 4));
         System.out.println(dateString.substring(5, 7));
         System.out.println(dateString.substring(8, 10));
 
-        // ■ 以下の文字列から「カレー」を切り出し、その値を新しい変数に収納してください。
-        // 昼はカレーパンを食べて、夕食ではグリーンカレーを食べました。
-        String curry = "昼はカレーパンを食べて、夕食ではグリーンカレーを食べました。";
-        String curryA = curry.substring(2, 5);
-        String curryB = curry.substring(20, 23);
+
+        // ■ 以下の文字列を宣言してください。
+        // lorem ipsum dolor sit amet lolem
+        String lorem = "lorem ipsum dolor sit amet lorem";
+
+        // ■ 宣言した文字列から最初の5桁と最後の5桁を切り出し、変数に収納してください。
+        String loremA = lorem.substring(0, 5);
+        String loremB = lorem.substring(27, 32);
 
         // ■ 二つの文字列の比較結果を標準出力してください。
         // 出力結果：
         // true
-        System.out.println(curryA.equals(curryB));
+        System.out.println(loremA.equals(loremB));
     }
 }
