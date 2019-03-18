@@ -7,7 +7,7 @@ public class MapLesson {
     public static void main(String[] args) {
         // Lesson Java基礎⑪（Java基礎クラス）
 
-        // 【問題】Mapを使ってみましょう。
+        // 【問題】マップを使ってみましょう。
         // ※　Petクラスを利用します。
 
         // Activityに使うPetクラスのインスタンスです。
@@ -19,7 +19,7 @@ public class MapLesson {
         // ※ キーはStringです。
         Map<String, Pet> pets = new HashMap<String, Pet>();
 
-        // ■ 新しく宣言したリストが空か判定し、その結果を標準出力してください。
+        // ■ 新しく宣言したマップが空か判定し、その結果を標準出力してください。
         // 出力結果：
         // true
         System.out.println(pets.isEmpty());

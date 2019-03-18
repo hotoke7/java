@@ -7,7 +7,7 @@ public class ListLesson {
     public static void main(String[] args) {
         // Lesson Java基礎⑪（Java基礎クラス）
 
-        // 【問題】Listを使ってみましょう。
+        // 【問題】リストを使ってみましょう。
         // ※　Petクラスを利用します。
 
         // Activityに使うPetクラスのインスタンスです。
@@ -22,7 +22,7 @@ public class ListLesson {
         // true
         System.out.println(pets.isEmpty());
 
-        // ■ 作成したListに上記のインスタンスを追加してください。
+        // ■ 作成したリストに上記のインスタンスを追加してください。
         pets.add(dog);
         pets.add(cat);
 
