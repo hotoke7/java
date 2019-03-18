@@ -18,28 +18,26 @@ public class StringLesson {
         System.out.println("lunch : " + lunch.length());
         System.out.println("dinner : " + dinner.length());
 
-        // ■ 以下の文字列を持つ文字列を宣言し、同じアルファベット単位で切り出して標準出力してください。
-        // yyyy-MM-dd
+        // ■ 以下の文字列を宣言し、年月日を別々で切り出して標準出力してください。
+        // 2019/05/14
         // 出力結果：
-        // yyyy
-        // MM
-        // dd
-        String dateString = "yyyy-MM-dd";
+        // 2019
+        // 05
+        // 14
+        String dateString = "2019/05/14";
         System.out.println(dateString.substring(0, 4));
         System.out.println(dateString.substring(5, 7));
         System.out.println(dateString.substring(8, 10));
 
-        // ■ 以下の文字列を比較し、比較結果を標準出力してください。
-        // 出力結果：
-        // a & b : true
-        // b & c : false
-        // c & a : false
-        String a = "カレー";
-        String b = "カレー";
-        String c = "ハヤシライス";
+        // ■ 以下の文字列から「カレー」を切り出し、その値を新しい変数に収納してください。
+        // 昼はカレーパンを食べて、夕食ではグリーンカレーを食べました。
+        String curry = "昼はカレーパンを食べて、夕食ではグリーンカレーを食べました。";
+        String curryA = curry.substring(2, 5);
+        String curryB = curry.substring(20, 23);
 
-        System.out.println("a & b : " + a.equals(b));
-        System.out.println("b & c : " + b.equals(c));
-        System.out.println("c & a : " + c.equals(a));
+        // ■ 二つの文字列の比較結果を標準出力してください。
+        // 出力結果：
+        // true
+        System.out.println(curryA.equals(curryB));
     }
 }
