@@ -18,32 +18,28 @@ public class StringLesson {
         System.out.println("lunch : " + lunch.length());
         System.out.println("dinner : " + dinner.length());
 
-
-        // 実務で使いそうなSubstringの使い方を教えてほしい。
-        // ■ 「substring」メソッドを使って、各文字列から「カレー」を切り出してください。
-
-
-        // 切り出した結果を、新しいString変数に収納してください。
-
-
-        // Under Construction
-        // ■ 「substring」メソッドを使って、各文字列から「カレー」を切り出してください。
-        // 切り出した結果を、新しいString変数に収納してください。
-        String lunchCurry = lunch.substring(2, 5);
-        String dinnerCurry = dinner.substring(8, 11);
-
-        // ■ 「カレー」を切り出して収納した変数を標準出力してください。
+        // ■ 以下の文字列を持つ文字列を宣言し、同じアルファベット単位で切り出して標準出力してください。
+        // yyyy-MM-dd
         // 出力結果：
-        // lunch : カレー
-        // dinner : カレー
-        System.out.println("lunch : " + lunchCurry);
-        System.out.println("dinner : " + dinnerCurry);
+        // yyyy
+        // MM
+        // dd
+        String dateString = "yyyy-MM-dd";
+        System.out.println(dateString.substring(0, 4));
+        System.out.println(dateString.substring(5, 7));
+        System.out.println(dateString.substring(8, 10));
 
-        // ■ 「equals」メソッドを使って、切り取った文字列を比較してください。
-        // 比較結果は標準出力してください。
+        // ■ 以下の文字列を比較し、比較結果を標準出力してください。
         // 出力結果：
-        // true
-        System.out.println("「equals」比較：");
-        System.out.println(lunchCurry.equals(dinnerCurry));
+        // a & b : true
+        // b & c : false
+        // c & a : false
+        String a = "カレー";
+        String b = "カレー";
+        String c = "ハヤシライス";
+
+        System.out.println("a & b : " + a.equals(b));
+        System.out.println("b & c : " + b.equals(c));
+        System.out.println("c & a : " + c.equals(a));
     }
 }
