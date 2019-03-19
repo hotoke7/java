@@ -3,15 +3,15 @@ package java_basic_09;
 public class PayPhone extends Telephone {
     public int balance;
 
-    public PayPhone(String phoneNumber, int balance) {
+    public PayPhone(String phoneNumber) {
         super(phoneNumber);
-        this.balance = balance;
+        this.balance = 0;
     }
 
     @Override
     public void call(String targetNumber) {
         if (balance < 10) {
-            System.out.println("残高が10円以下です。お金を入れてください。");
+            System.out.println("残高が10円未満です。お金を入れてください。");
             return;
         }
         super.call(targetNumber);

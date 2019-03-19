@@ -22,15 +22,20 @@ public class InheritanceLesson {
         String smartPhoneNumber = "090-1111-1111";
 
         //Mainクラスで、子クラスのインスタンスを生成する
-        PayPhone payPhone = new PayPhone(payPhoneNumber, 0);
-        SmartPhone smartPhone = new SmartPhone(smartPhoneNumber);
+        PayPhone payPhone = new PayPhone(payPhoneNumber);
+        Telephone mobilePhone = new SmartPhone(smartPhoneNumber);
+
+        Telephone publicPhone = payPhone;
 
         //Mainクラスで、次の4つのメソッドを呼び出す。
         // ①親クラスのメソッド、
-        smartPhone.call(payPhoneNumber);
-        payPhone.answer(smartPhoneNumber);
+        //
+        mobilePhone.call(payPhoneNumber);
+        publicPhone.answer(smartPhoneNumber);
 
         // ②子クラスのメソッド、
+
+        SmartPhone smartPhone = (SmartPhone) mobilePhone;
         smartPhone.camera();
         smartPhone.music();
 
