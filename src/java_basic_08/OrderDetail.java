@@ -3,12 +3,12 @@ package java_basic_08;
 public class OrderDetail {
     private String productName;
     private int price;
-    private int qty;
+    private int quantity;
 
-    public OrderDetail(String productName, int price, int qty) {
+    public OrderDetail(String productName, int price, int quantity) {
         this.productName = productName;
         this.price = price;
-        this.qty = qty;
+        this.quantity = quantity;
     }
 
     public String getProductName() {
@@ -19,7 +19,7 @@ public class OrderDetail {
         return price;
     }
 
-    public int getQty() {
-        return qty;
+    public int getQuantity() {
+        return quantity;
     }
 }

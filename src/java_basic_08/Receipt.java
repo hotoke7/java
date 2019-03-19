@@ -27,7 +27,7 @@ public class Receipt {
         int totalPrice = 0;
         for (int i = 0; i < orderDetail.length; i++) {
             OrderDetail detail = orderDetail[i];
-            totalPrice += detail.getPrice() * detail.getQty();
+            totalPrice += detail.getPrice() * detail.getQuantity();
         }
         return totalPrice;
     }
