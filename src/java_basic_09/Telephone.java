@@ -12,7 +12,7 @@ public class Telephone {
     }
 
     public void answer(String oppsiteNumber) {
-        System.out.println(oppsiteNumber+ "から電話が来ました。電話を受けます。");
+        System.out.println(oppsiteNumber + "から電話が来ました。電話を受けます。");
     }
 
     public void hangUp() {

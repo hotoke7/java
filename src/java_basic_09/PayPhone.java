@@ -13,6 +13,7 @@ public class PayPhone extends Telephone {
         if (balance < 10) {
             System.out.println("残高が10円未満です。お金を入れてください。");
             return;
+
         }
         super.call(targetNumber);
         balance -= 10;
