@@ -2,49 +2,67 @@ package java_basic_09;
 
 public class InheritanceLesson {
     // Lesson Java基礎⑨（継承）
-
-    // 前提 以下の3クラスの型が作成された状態
-    //親クラス
-    //子クラス
-    //mainメソッドを記載したMainクラス
-
-    //Activity内容
-    //以下の観点を盛り込んだActivityの作成をお願いします。
-    //親クラスに複数のメソッドを作成する（最低3つ）
-    //親クラスに、引数ありのコンストラクタを作成する
-    //子クラスに、親クラスにはないメソッドを作成する（最低1つ）
-    //子クラスに、コンストラクタを作成する（superで親クラスのコンストラクタを明示的に呼び出す）
-    //子クラスで、親クラス持つ1メソッドをオーバーライドする
-    //子クラスで、親クラス持つ1メソッドをオーバーライドする。メソッドの中で、superを使って親クラスの処理を呼び出す。
+    // 【問題】作成した各クラスを使って、継承の実習を行ってください。
 
     public static void main(String[] args) {
-        String payPhoneNumber = "080-0000-0000";
-        String smartPhoneNumber = "090-1111-1111";
+        // Telephoneクラスのメソッドを呼び出すときに使く電話番号です。
+        // 頻繁に使う為、変数を作成しておきました。
+        String phoneNumber = "080-0000-0000";
 
-        //Mainクラスで、子クラスのインスタンスを生成する
-        PayPhone payPhone = new PayPhone(payPhoneNumber);
-        Telephone mobilePhone = new SmartPhone(smartPhoneNumber);
+        // ■ 子クラス（PayPhone、SmartPhone）のインスタンスを生成してください。
+        PayPhone payPhone = new PayPhone(phoneNumber);
+        SmartPhone smartPhone = new SmartPhone(phoneNumber);
 
-        Telephone publicPhone = payPhone;
+        // オーバライドしてない親のメソッド
+        // ■ SmartPhoneのインスタンスより「call」メソッドを呼び出してください。
+        // 出力結果
+        // 080-0000-0000に電話を掛けました。
+        smartPhone.call(phoneNumber);
 
-        //Mainクラスで、次の4つのメソッドを呼び出す。
-        // ①親クラスのメソッド、
-        //
-        mobilePhone.call(payPhoneNumber);
-        publicPhone.answer(smartPhoneNumber);
+        // ■ PayPhoneのインスタンスより「answer」メソッドを呼び出してください。
+        // 出力結果
+        // 電話を取りました。
+        payPhone.answer();
 
-        // ②子クラスのメソッド、
+        // 子クラスで生成したメソッド
+        // ■ SmartPhoneのインスタンスより「takePictures」「listenToTheMusic」メソッドを呼び出してください。
+        // 出力結果
+        // 写真を撮りました。
+        // 音楽をかけました。
+        smartPhone.takePictures();
+        smartPhone.listenToTheMusic();
 
-        SmartPhone smartPhone = (SmartPhone) mobilePhone;
-        smartPhone.camera();
-        smartPhone.music();
+        // 子クラスでオーバーライドしたメソッド
+        // ■ PayPhoneのインスタンスより「call」メソッドを呼び出してください。
+        // 出力結果
+        // 残高が10円未満です。お金を入れてください。
+        payPhone.call(phoneNumber);
 
-        // ③子クラスでオーバーライドしたメソッド、
-        payPhone.call(smartPhoneNumber);
+        // ■ PayPhoneのインスタンスより「insertMoney」メソッドを呼び出してください。
+        // 引数として整数型「50」を渡してください。
+        // 出力結果
+        // 50円をチャージしました。現在の残高は50円です。
         payPhone.insertMoney(50);
 
-        // ④子クラスでオーバーライドし、superを使って親クラスの処理を呼び出すメソッド
-        payPhone.call(smartPhoneNumber);
-        payPhone.hangUp();
+        // 子クラスでオーバーライドし、親クラスの処理を呼び出すメソッド
+        // アップキャスト
+        // ■ 生成したPayPhoneクラスのインスタンスをTelephoneクラスにアップキャストしてください。
+        Telephone payPhoneUp = payPhone;
+
+        // ■ アップキャストしたインスタンスよりPayPhoneクラスの「call」メソッドを呼び出してください。
+        // 出力結果
+        // 080-0000-0000に電話を掛けました。
+        // 残高は40円です。
+        payPhoneUp.call(phoneNumber);
+
+        // ダウンキャスト
+        // ■ アップキャストしたインスタンスをまたPayPhoneクラスにダウンキャストしてください。
+        PayPhone payPhoneDown = (PayPhone) payPhoneUp;
+
+        // ■ ダウンキャストインスタンスよりPayPhoneクラスの「hangUp」メソッドを呼び出してください。
+        // 出力結果
+        // 電話を切りました。
+        // お釣りの40円を返します。
+        payPhoneDown.hangUp();
     }
 }

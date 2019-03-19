@@ -8,6 +8,10 @@ public class PayPhone extends Telephone {
         this.balance = 0;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
     @Override
     public void call(String targetNumber) {
         if (balance < 10) {

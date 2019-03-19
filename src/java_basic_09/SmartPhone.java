@@ -5,11 +5,11 @@ public class SmartPhone extends Telephone {
         super(phoneNumber);
     }
 
-    public void camera() {
-        System.out.println("写真を撮ります。");
+    public void takePictures() {
+        System.out.println("写真を撮りました。");
     }
 
-    public void music() {
-        System.out.println("音楽を聴きます。");
+    public void listenToTheMusic() {
+        System.out.println("音楽をかけました。");
     }
 }

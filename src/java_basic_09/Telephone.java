@@ -8,15 +8,15 @@ public class Telephone {
     }
 
     public void call(String targetNumber) {
-        System.out.println(targetNumber + "に電話を掛けます。");
+        System.out.println(targetNumber + "に電話を掛けました。");
     }
 
-    public void answer(String oppsiteNumber) {
-        System.out.println(oppsiteNumber + "から電話が来ました。電話を受けます。");
+    public void answer() {
+        System.out.println("電話を取りました。");
     }
 
     public void hangUp() {
-        System.out.println("電話を切ります。");
+        System.out.println("電話を切りました。");
     }
 }
 
