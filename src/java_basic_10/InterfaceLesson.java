@@ -10,25 +10,28 @@ public class InterfaceLesson {
         RemoteControlForTv remoteControlForTv = new RemoteControlForTv();
         RemoteControlForSpeaker remoteControlForSpeaker = new RemoteControlForSpeaker();
 
+
         // ■ 作成したインスタンスでメソッドを使ってみましょう。
-        // 電気とテレビを消して、スピーカーの電源を付けてください。
+        // 電気とテレビ、スピーカーの電源を消してください。
+        // 出力結果より、同じメソッドを使ったのに結果が異なることが確認できます。
         // 出力結果：
-        // 電気をつけました。
+        // 電気を消しました。
         // テレビの電源を消しました。
         // スピーカーの電源をを消しました。
-        remoteControlForLight.turnOn();
+        remoteControlForLight.turnOff();
         remoteControlForTv.turnOff();
         remoteControlForSpeaker.turnOff();
 
         // ■ Personクラスのインスタンスを生成してください。
         Person person = new Person();
 
-        // Personクラスのメソッドを使って、電気とテレビの電源を付けてください。
+        // Personクラスのメソッドを使って、電気とテレビ、スピーカの電源を付けてください。
+        // 個別のインスタンスからメソッドを呼ぶ時と同じく、振る舞いが変わったことが確認できます。
         // 出力結果：
-        // 電気を消しました。
+        // 電気をつけました。
         // テレビの電源をつけました。
         // スピーカーの電源をつけました。
-        person.pressOffButton(remoteControlForLight);
+        person.pressOnButton(remoteControlForLight);
         person.pressOnButton(remoteControlForTv);
         person.pressOnButton(remoteControlForSpeaker);
 
