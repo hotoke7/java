@@ -3,20 +3,7 @@ package java_basic_10;
 public class InterfaceLesson {
     public static void main(String[] args) {
         // Java基礎⑩（インターフェース）
-        // 【問題】作成した自動販売機クラスを利用して、自動販売機から物を購入してみましょう。
-
-        //    前提
-        //    以下のインターフェース・クラスの型が作成された状態
-        //            インターフェース
-        //            インターフェースを実装したクラスA
-        //            インターフェースを実装したクラスB
-        //            mainメソッドを記載したMainクラス
-        //    Activity内容
-        //    以下の観点を盛り込んだActivityの作成をお願いします。
-        //    インターフェースに抽象メソッドを作成する
-        //    インターフェースを実装したクラスAで、抽象メソッドをオーバーライドする
-        //    インターフェースを実装したクラスBで、抽象メソッドをオーバーライドする
-        //            mainメソッドからクラスAとクラスBの処理を呼び出す
+        // 【問題】作成したクラスを利用して、リモコンを操作してみましょう。
 
         // ■ RemoteControlインタフェースで実装したクラスのインスタンスを生成してください。
         RemoteControlForLight remoteControlForLight = new RemoteControlForLight();
