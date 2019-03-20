@@ -1,19 +1,19 @@
 package java_basic_10;
 
 public class Person {
-    public void pressOnButton(RemoteControl remoteControl){
+    public void pressOnButton(RemoteControl remoteControl) {
         remoteControl.turnOn();
     }
 
-    public void pressOffButton(RemoteControl remoteControl){
+    public void pressOffButton(RemoteControl remoteControl) {
         remoteControl.turnOff();
     }
 
-    public void pressVolumeUpButton(VolumeAdjustable volumeAdjustable){
+    public void pressVolumeUpButton(VolumeAdjustable volumeAdjustable) {
         volumeAdjustable.volumeUp();
     }
 
-    public void pressVolumeDownButton(VolumeAdjustable volumeAdjustable){
+    public void pressVolumeDownButton(VolumeAdjustable volumeAdjustable) {
         volumeAdjustable.volumeDown();
     }
 }

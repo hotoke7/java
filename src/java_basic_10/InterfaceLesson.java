@@ -3,7 +3,7 @@ package java_basic_10;
 public class InterfaceLesson {
     public static void main(String[] args) {
         // Java基礎⑩（インターフェース）
-        // 【問題】作成したクラスを利用して、リモコンを操作してみましょう。
+        // 【問題】作成した各クラスを使って、リモコンを操作してみましょう。
 
         // ■ RemoteControlインタフェースで実装したクラスのインスタンスを生成してください。
         RemoteControlForLight remoteControlForLight = new RemoteControlForLight();
