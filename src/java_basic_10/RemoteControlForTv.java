@@ -1,7 +1,6 @@
 package java_basic_10;
 
 public class RemoteControlForTv implements RemoteControl, VolumeAdjustable {
-
     @Override
     public void turnOn() {
         System.out.println("テレビの電源をつけました。");
