@@ -1,7 +1,6 @@
 package java_basic_10;
 
 public class RemoteControlForSpeaker implements RemoteControl, VolumeAdjustable {
-    private int volume;
 
     @Override
     public void turnOn() {
