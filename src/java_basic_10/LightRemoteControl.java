@@ -1,6 +1,6 @@
 package java_basic_10;
 
-public class RemoteControlForLight implements RemoteControl {
+public class LightRemoteControl implements RemoteControl {
     @Override
     public void turnOn() {
         System.out.println("電気をつけました。");

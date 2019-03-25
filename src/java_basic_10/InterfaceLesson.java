@@ -6,9 +6,9 @@ public class InterfaceLesson {
         // 【問題】作成した各クラスを使って、リモコンを操作してみましょう。
 
         // ■ RemoteControlインタフェースで実装したクラスのインスタンスを生成してください。
-        RemoteControlForLight remoteControlForLight = new RemoteControlForLight();
-        RemoteControlForTv remoteControlForTv = new RemoteControlForTv();
-        RemoteControlForSpeaker remoteControlForSpeaker = new RemoteControlForSpeaker();
+        LightRemoteControl lightRemoteControl = new LightRemoteControl();
+        TVRemoteControl tvRemoteControl = new TVRemoteControl();
+        SpeakerRemoteControl speakerRemoteControl = new SpeakerRemoteControl();
 
         // 作成したインスタンスでメソッドを使ってみましょう。
         // 出力結果より、同じメソッドを使ったのに結果が異なることが確認できます。
@@ -18,18 +18,18 @@ public class InterfaceLesson {
         // 電気をつけました。
         // テレビの電源をつけました。
         // スピーカーの電源をつけました。
-        remoteControlForLight.turnOn();
-        remoteControlForTv.turnOn();
-        remoteControlForSpeaker.turnOn();
+        lightRemoteControl.turnOn();
+        tvRemoteControl.turnOn();
+        speakerRemoteControl.turnOn();
 
         // ■ 電気とテレビ、スピーカーの電源を消してください。
         // 出力結果：
         // 電気を消しました。
         // テレビの電源を消しました。
         // スピーカーの電源をを消しました。
-        remoteControlForLight.turnOff();
-        remoteControlForTv.turnOff();
-        remoteControlForSpeaker.turnOff();
+        lightRemoteControl.turnOff();
+        tvRemoteControl.turnOff();
+        speakerRemoteControl.turnOff();
 
         // ■ Personクラスのインスタンスを生成してください。
         Person person = new Person();
@@ -42,24 +42,24 @@ public class InterfaceLesson {
         // 電気をつけました。
         // テレビの電源をつけました。
         // スピーカーの電源をつけました。
-        person.pressOnButton(remoteControlForLight);
-        person.pressOnButton(remoteControlForTv);
-        person.pressOnButton(remoteControlForSpeaker);
+        person.pressOnButton(lightRemoteControl);
+        person.pressOnButton(tvRemoteControl);
+        person.pressOnButton(speakerRemoteControl);
 
         // ■ 電気とテレビ、スピーカの電源を消してください。
         // 出力結果：
         // 電気を消しました。
         // テレビの電源を消しました。
         // スピーカーの電源をを消しました。
-        person.pressOffButton(remoteControlForLight);
-        person.pressOffButton(remoteControlForTv);
-        person.pressOffButton(remoteControlForSpeaker);
+        person.pressOffButton(lightRemoteControl);
+        person.pressOffButton(tvRemoteControl);
+        person.pressOffButton(speakerRemoteControl);
 
         // Personクラスのメソッドを使って、テレビの音量を上げ、スピーカーの音量は下げてください。
         // 出力結果：
         // テレビの音量を上げました。
         // スピーカーの音量を下げました。
-        person.pressVolumeUpButton(remoteControlForTv);
-        person.pressVolumeDownButton(remoteControlForSpeaker);
+        person.pressVolumeUpButton(tvRemoteControl);
+        person.pressVolumeDownButton(speakerRemoteControl);
     }
 }

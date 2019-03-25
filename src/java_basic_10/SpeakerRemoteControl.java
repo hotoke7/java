@@ -1,6 +1,6 @@
 package java_basic_10;
 
-public class RemoteControlForSpeaker implements RemoteControl, VolumeAdjustable {
+public class SpeakerRemoteControl implements RemoteControl, VolumeAdjustable {
     @Override
     public void turnOn() {
         System.out.println("スピーカーの電源をつけました。");
