@@ -8,11 +8,11 @@ public class ExceptionParty {
     // ■ 例外発生時、以下の文字列を返却してください。
     // Hello, null!
     public String isEqualToNull() {
-        String hello = "Hello";
+        String hello = null;
         String greeting;
 
         try {
-            if (hello.equals(null)) {
+            if (hello.equals("hello")) {
                 greeting = "Hello, world!";
             } else {
                 greeting = "Goodbye, world!";
