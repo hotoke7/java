@@ -1,10 +1,6 @@
 package java_advance_01;
 
 public class ExceptionParty {
-    // Java応用①（例外処理）
-    // 【問題】ExceptionPartyクラスの各メソッドでは例外が発生しています。
-    // 指示に従い、各メソッドにて例が処理を行ってください。
-
     // ■ 例外発生時、以下の文字列を返却してください。
     // Hello, null!
     public String isEqualToNull() {
