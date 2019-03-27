@@ -17,7 +17,6 @@ public class PayPhone extends Telephone {
         }
         super.call(targetNumber);
         balance -= 10;
-        System.out.println("残高は" + balance + "円です。");
     }
 
     @Override
