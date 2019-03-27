@@ -1,15 +1,11 @@
 package java_basic_09;
 
 public class PayPhone extends Telephone {
-    public int balance;
+    private int balance;
 
     public PayPhone(String phoneNumber) {
         super(phoneNumber);
         this.balance = 0;
-    }
-
-    public int getBalance() {
-        return balance;
     }
 
     @Override

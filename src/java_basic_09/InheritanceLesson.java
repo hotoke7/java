@@ -5,38 +5,48 @@ public class InheritanceLesson {
     // 【問題】作成した各クラスを使って、継承の実習を行ってください。
 
     public static void main(String[] args) {
-        // Telephoneクラスのメソッドを呼び出すときに使く電話番号です。
-        // 頻繁に使う為、変数を作成しておきました。
-        String phoneNumber = "080-0000-0000";
+        // PayPhone、SmartPhoneの電話番号
+        String payPhoneNumber = "080-1111-1111";
+        String smartPhoneNumber = "080-2222-2222";
 
-        // ■ 子クラス（PayPhone、SmartPhone）のインスタンスを生成してください。
-        PayPhone payPhone = new PayPhone(phoneNumber);
-        SmartPhone smartPhone = new SmartPhone(phoneNumber);
+        // ■ 各電話番号を使用して、PayPhone、SmartPhoneのインスタンスを生成してください。
+        PayPhone payPhone = new PayPhone(payPhoneNumber);
+        SmartPhone smartPhone = new SmartPhone(smartPhoneNumber);
 
         // オーバライドしてない親のメソッド
-        // ■ SmartPhoneのインスタンスより「call」メソッドを呼び出してください。
+        // ■ SmartPhoneのインスタンスから「call」メソッドを使用して080-3333-3333に電話をかけてください。
         // 出力結果
-        // 080-0000-0000に電話を掛けました。
-        smartPhone.call(phoneNumber);
+        // 080-3333-3333に電話を掛けます。
+        smartPhone.call("080-3333-3333");
 
-        // ■ PayPhoneのインスタンスより「answer」メソッドを呼び出してください。
+        // ■ SmartPhoneのインスタンスから「hangUp」メソッドを呼び出して、電話をきってください。
+        // 出力結果
+        // 電話を取りました。
+        smartPhone.hangUp();
+
+        // ■ PayPhoneのインスタンスより「answer」メソッドを呼び出して、電話に出てください。
         // 出力結果
         // 電話を取りました。
         payPhone.answer();
 
-        // 子クラスで生成したメソッド
-        // ■ SmartPhoneのインスタンスより「takePictures」「listenToTheMusic」メソッドを呼び出してください。
+        // ■ PayPhoneのインスタンスより「hangUp」メソッドを呼び出して、電話にきってください。
         // 出力結果
-        // 写真を撮りました。
-        // 音楽をかけました。
-        smartPhone.takePictures();
-        smartPhone.listenToTheMusic();
+        // 電話を取りました。
+        payPhone.hangUp();
+
+        // 子クラスで生成したメソッド
+        // ■ SmartPhoneのインスタンスより「takePicture」「playMusic」メソッドを呼び出してください。
+        // 出力結果
+        // 写真を撮ります。
+        // 音楽をかけます。
+        smartPhone.takePicture();
+        smartPhone.playMusic();
 
         // 子クラスでオーバーライドしたメソッド
-        // ■ PayPhoneのインスタンスより「call」メソッドを呼び出してください。
+        // ■ PayPhoneのインスタンスより「call」メソッドを使用して080-4444-4444に電話をかけてください。
         // 出力結果
         // 残高が10円未満です。お金を入れてください。
-        payPhone.call(phoneNumber);
+        payPhone.call("080-4444-4444");
 
         // ■ PayPhoneのインスタンスより「insertMoney」メソッドを呼び出してください。
         // 引数として整数型「50」を渡してください。
@@ -44,20 +54,32 @@ public class InheritanceLesson {
         // 50円をチャージしました。現在の残高は50円です。
         payPhone.insertMoney(50);
 
-        // 子クラスでオーバーライドし、親クラスの処理を呼び出すメソッド
+        // 子クラスでオーバーライドしたメソッド
+        // ■ PayPhoneのインスタンスより「call」メソッドを使用して080-4444-4444に電話をかけてください。
+        // 出力結果
+        // 080-4444-4444に電話を掛けました。
+        // 残高は40円です。
+        payPhone.call("080-4444-4444");
+
+        // 子クラスでオーバーライドしたメソッド
+        // 出力結果
+        // 電話を切りました。
+        // お釣りの40円を返します。
+        payPhone.hangUp();
+
         // アップキャスト
         // ■ 生成したPayPhoneクラスのインスタンスをTelephoneクラスにアップキャストしてください。
-        Telephone payPhoneUp = payPhone;
+        Telephone telephone = payPhone;
 
         // ■ アップキャストしたインスタンスよりPayPhoneクラスの「call」メソッドを呼び出してください。
         // 出力結果
         // 080-0000-0000に電話を掛けました。
         // 残高は40円です。
-        payPhoneUp.call(phoneNumber);
+        telephone.call("080-4444-4444");
 
         // ダウンキャスト
         // ■ アップキャストしたインスタンスをまたPayPhoneクラスにダウンキャストしてください。
-        PayPhone payPhoneDown = (PayPhone) payPhoneUp;
+        PayPhone payPhoneDown = (PayPhone) telephone;
 
         // ■ ダウンキャストインスタンスよりPayPhoneクラスの「hangUp」メソッドを呼び出してください。
         // 出力結果
