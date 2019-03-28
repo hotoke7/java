@@ -6,25 +6,23 @@ public class DebugLessonTwo {
 
     // 機能詳細
     // 1～6までの値を持つサイコロがあります。
-    // このサイコロを2回振って、AとBの二つの値を取得します。
-    // 取得した値で「AかけるB」と「AたすB」を取得します。
-    // 得た結果の最大公約数を計算します。
-    // この処理を10回繰り返す機能です。
+    // このサイコロを３回振って、A、B、Cの三つの値を取得します。
+    // 取得した値で「AたすB」と「AかけるB」を取得します。
+    // 得た結果の最大公約数、最小公倍数を計算します。
+    // この処理を５回繰り返す機能です。
     public static void main(String[] args) {
-        int result;
-        int multiplication;
-        int addition;
-        int numberA;
-        int numberB;
+        int[] result;
+        int numberA, numberB;
+        int addition, multiplication;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             numberA = rollDice();
             numberB = rollDice();
 
-            multiplication = numberA * numberB;
             addition = numberA + numberB;
-            result = getGreatestCommonDivisor(multiplication, addition);
-            System.out.println(addition + "と" + multiplication + "の最大公約数：" + result);
+            multiplication = numberA * numberB;
+            result = getGcmAndLcm(addition, multiplication);
+            System.out.println(addition + "と" + multiplication + "の最大公約数：" + result[0] + "、最小公倍数：" + result[1]);
         }
     }
 
@@ -41,21 +39,22 @@ public class DebugLessonTwo {
     }
 
     /**
-     * 2つの整数の最大公約数を計算するメソッド。
+     * 2つの整数の最大公約数、最小公倍数を計算するメソッド。
      *
      * @param numberOne 整数１
      * @param numberTwo 整数２
-     * @return number 二つの整数の最大公約数
+     * @return int[] 二つの整数の最大公約数と最小公倍数
      */
-    public static int getGreatestCommonDivisor(int numberOne, int numberTwo) {
-        int bigNumber;
-        int smallNumber;
+    public static int[] getGcmAndLcm(int numberOne, int numberTwo) {
+        int bigNumber, smallNumber;
         int remain;
-        int gcm;
+        int gcm, lcm;
+        int[] gcmAndLcm = new int[2];
 
         // 二つの引数が同一だったら、最大公約数も引数のまま。
         if (numberOne == numberTwo) {
-            return numberOne;
+            gcmAndLcm[0] = numberOne;
+            gcmAndLcm[1] = numberOne;
         }
 
         // 引数の値を比較し、大きい数字と小さい数字を区分する。
@@ -68,12 +67,13 @@ public class DebugLessonTwo {
         }
 
         while (true) {
-            // 大きい数字を小さい数字で分け、その余りを取得。
+            // 大きい数字を小さい数字で分けた余りを取得。
             remain = bigNumber % smallNumber;
 
             // 余りがなかったら、小さい数が最大公約数。
             if (remain == 0) {
                 gcm = smallNumber;
+                lcm = (numberOne * numberTwo) / gcm;
                 break;
             }
 
@@ -82,6 +82,9 @@ public class DebugLessonTwo {
             bigNumber = smallNumber;
             smallNumber = remain;
         }
-        return gcm;
+
+        gcmAndLcm[0] = gcm;
+        gcmAndLcm[1] = lcm;
+        return gcmAndLcm;
     }
 }
