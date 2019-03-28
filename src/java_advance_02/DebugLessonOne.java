@@ -17,20 +17,17 @@ public class DebugLessonOne {
         stringCutter(dummyStringList);
     }
 
-    /**
-     * 文字列のリストを引数として受け取り、文字列の値によって以下の動作を行う。
-     * ・文字列の先頭4桁が「LIST」の場合、5桁目以後の文字列を標準出力
-     * ・文字列の先頭4桁が「LIST」ではない場合、「正しくないデータ」を標準出力
-     * <p>
-     * 予想結果：
-     * 01
-     * 02
-     * 正しくないデータ
-     * 04
-     * 正しくないデータ
-     *
-     * @param stringList 文字列のリスト
-     */
+    // 文字列のリストを引数として受け取り、文字列の値によって以下の動作を行う。
+    // ・文字列の先頭4桁が「LIST」の場合、5桁目以後の文字列を標準出力
+    // ・文字列の先頭4桁が「LIST」ではない場合、「正しくないデータ」を標準出力
+    // 引数：文字列のリスト
+    // 返却値：なし
+    // 予想結果：
+    // 01
+    // 02
+    // 正しくないデータ
+    // 04
+    // 正しくないデータ
     public static void stringCutter(List<String> stringList) {
         for (String str : stringList) {
             if (str.substring(0, 4).equals("LIST")) {
