@@ -8,41 +8,35 @@ public class DebugLessonOne {
     // ■ 以下のソースコードに潜んでいるバグを修正してください。
     public static void main(String[] args) {
         List<String> dummyStringList = new ArrayList<>();
-        dummyStringList.add("TEST_324rf3495");
-        dummyStringList.add("TEST__002154");
-        dummyStringList.add("TEST_0514q3222");
-        dummyStringList.add("TEsT_2348057340");
-        dummyStringList.add("TEST_2345621");
-        dummyStringList.add(" TEST_002154");
-        dummyStringList.add("TEST_0iii1541");
-        dummyStringList.add("TEST_FF162");
-        dummyStringList.add("TEST_0514370");
-        dummyStringList.add("tEST_00215134");
-        dummyStringList.add("TEST_0021154");
-        dummyStringList.add("TEST_340143");
-        dummyStringList.add("TEST_05143170");
-        dummyStringList.add("TEsT_000234203");
-        dummyStringList.add("tEST_002sf15134");
-        dummyStringList.add("TEST_002aa1154");
-        dummyStringList.add("TEST_342r50143");
-        dummyStringList.add("TEST_05143170");
-        dummyStringList.add("TEsT_000234203");
-        dummyStringList.add("TST_6858223");
-        dummyStringList.add("TST_68223");
-        dummyStringList.add("T EST_0f120");
-        dummyStringList.add("TEST_RRGD54");
-        dummyStringList.add("TEST_34iii43");
-        dummyStringList.add("TEST_05ll170");
+        dummyStringList.add("LIST_01");
+        dummyStringList.add("LIST_02");
+        dummyStringList.add("list_03");
+        dummyStringList.add("LIST_04");
+        dummyStringList.add("LlST_05");
 
         stringCutter(dummyStringList);
     }
 
-    // 文字列のリストを引数として受け取り、
-    // 文字列の先頭が「TEST」の場合、12桁目以後の文字列を出力するメソッド
+    /**
+     * 文字列のリストを引数として受け取り、文字列の値によって以下の動作を行う。
+     * ・文字列の先頭4桁が「LIST」の場合、5桁目以後の文字列を標準出力
+     * ・文字列の先頭4桁が「LIST」ではない場合、「正しくないデータ」を標準出力
+     * <p>
+     * 予想結果：
+     * 01
+     * 02
+     * 正しくないデータ
+     * 04
+     * 正しくないデータ
+     *
+     * @param stringList 文字列のリスト
+     */
     public static void stringCutter(List<String> stringList) {
         for (String str : stringList) {
-            if (str.length() > 12 && str.substring(0, 4).equals("TEST")) {
-                System.out.println(str.substring(12));
+            if (str.substring(0, 4).equals("LIST")) {
+                System.out.println(str.substring(5));
+            } else {
+                System.out.println("正しくないデータ");
             }
         }
     }
