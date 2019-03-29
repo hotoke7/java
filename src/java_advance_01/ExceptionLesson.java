@@ -7,7 +7,7 @@ public class ExceptionLesson {
 
         // Java応用①（例外処理）
         // 【問題】勤務時間を入力すると定時帰りかをチェックする機能があります。
-        //         こちらの機能に上記の「workingHoursList」を渡し、正しい動作を行うように実装してください。
+        //         こちらの機能に上記の「workingHoursList」を渡し、正しい動作をするように実装してください。
         //         出力結果はWikiを参照してください。
         for (int workingHours : workingHoursList) {
             System.out.println(workingHours + "時間勤務の場合：");
