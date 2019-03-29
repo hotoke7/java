@@ -8,10 +8,10 @@ public class WorkingHourRule {
     // - 勤務時間が8時間未満の場合：EarlyLeaveExceptionをメッセージと共に送出する。
     // - 勤務時間が8時間の場合：「定時帰りです。」を標準出力する。
     // 引数：workingHours 勤務時間（整数）
-    // 返却値：boolean true
+    // 返却値：なし
     // 例外1：NoMoreOvertimeException 勤務時間が正規勤務時間より大きくて、オーバータイムが発生した場合
     // 例外2：EarlyLeaveException     勤務時間が正規勤務時間より少なくて、早退が発生した場合
-    public boolean checkRegularTime(int workingHours) throws OvertimeException, EarlyLeaveException {
+    public void checkRegularTime(int workingHours) throws OvertimeException, EarlyLeaveException {
         int officeHours = 8;
         if (workingHours > officeHours) {
             int overtime = workingHours - officeHours;
@@ -20,6 +20,5 @@ public class WorkingHourRule {
             int earlyLeave = officeHours - workingHours;
             throw new EarlyLeaveException(earlyLeave + "時間早帰りです。");
         }
-        return true;
     }
 }
