@@ -12,7 +12,8 @@ public class RockPaperScissors {
         // Lesson Java一貫① じゃんけんゲーム①
         // 【問題】一発勝負のじゃんけんゲームを作成してください。
 
-        // ■ コンピューターとユーザーの選択値を収納する変数を作成します。
+        // ■ コンピューターの選択値を収納する変数と、ユーザーの選択値を収納する変数を作成してください。
+        // 選択値は整数型です。
         int yourChoice;
         int computersChoice;
 
