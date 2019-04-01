@@ -9,6 +9,10 @@ public class RockPaperScissors {
 
     // Lesson Java一貫② じゃんけんゲーム②
     // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
+
+    // ■ 「play」メソッドに引数を追加してください。
+    // 引数1：Player ユーザー
+    // 引数2：Player コンピューター
     public void play(Player you, Player computer) {
         // サイズが３の文字列の配列を宣言し、「グー」「パー」「チョキ」の文字列を配列に格納します。
         String[] rps = new String[3];
