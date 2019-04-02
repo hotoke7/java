@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class RockPaperScissors {
-    static Random random = new Random();
-    static Scanner scan = new Scanner(System.in);
+    private Random random = new Random();
+    private Scanner scan = new Scanner(System.in);
 
     // Lesson Java一貫② じゃんけんゲーム②
     // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
