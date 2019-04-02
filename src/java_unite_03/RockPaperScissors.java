@@ -2,7 +2,7 @@ package java_unite_03;
 
 public class RockPaperScissors {
 
-    // Lesson Java一貫② じゃんけんゲーム②
+    // Lesson Java一貫③ じゃんけんゲーム③
     // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
 
     // ■ 「play」メソッドに引数を追加してください。
