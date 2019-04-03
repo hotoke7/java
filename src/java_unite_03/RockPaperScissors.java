@@ -54,7 +54,7 @@ public class RockPaperScissors {
         //     ・以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
         //         引数1：ユーザーが出す手
         //         引数2：コンピュータが出す手
-        //         引数3：文字列「×」（文字列の配列「outcomes」より取得）
+        //         引数3：文字列「△」（文字列の配列「outcomes」より取得）
         if (yourChoice == computersChoice) {
             System.out.println("あいこです。");
             return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[1]);
@@ -103,7 +103,7 @@ public class RockPaperScissors {
         //     以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
         //       引数1：ユーザーが出す手
         //       引数2：コンピュータが出す手
-        //       引数3：文字列「△」（文字列の配列「outcomes」より取得）
+        //       引数3：文字列「×」（文字列の配列「outcomes」より取得）
         if (didYouWin) {
             return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[0]);
         }
