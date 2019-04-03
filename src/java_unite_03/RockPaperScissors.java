@@ -1,75 +1,112 @@
 package java_unite_03;
 
 public class RockPaperScissors {
-
     // Lesson Java一貫③ じゃんけんゲーム③
-    // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
+    // 【問題】以下のソースコードをもとに、RockPaperScissorsクラスを問題に従って変更してください。
 
-    // ■ 「play」メソッドに引数を追加してください。
-    // 引数1：Player ユーザー
-    // 引数2：Player コンピューター
-    public void play(ManualPlayer you, AutoPlayer computer) {
+    // ■ 「play」メソッドの引数を変更してください。
+    // 引数1：ManualRpsPlayer ユーザー
+    // 引数2：AutoRpsPlayer コンピューター
+    // 返却値：GameRecord ゲームの記録
+    public GameRecord play(ManualRpsPlayer you, AutoRpsPlayer computer) {
 
-        // サイズが３の文字列の配列を宣言し、「グー」「パー」「チョキ」の文字列を配列に格納します。
-        String[] rps = new String[3];
-        rps[0] = "グー";
-        rps[1] = "パー";
-        rps[2] = "チョキ";
+        // 「RpsStringArrays」クラスのインスタンスを宣言します。
+        // 「RpsStringArrays」クラスには、RPSゲームの中で使われるImmutable/Read-only属性の値が入っています。
+        RpsStringArrays rpsStringArrays = new RpsStringArrays();
+
+        // RpsStringArraysクラスから、「グー」「パー」「チョキ」の文字列の配列を取得します。
+        String[] rps = rpsStringArrays.getRps();
+
+        // RpsStringArraysクラスから、「〇」「△」「×」の文字列の配列を取得します。
+        String[] outcomes = rpsStringArrays.getOutcomes();
 
         System.out.println("以下の選択肢の中で一つを選んでください。");
 
-        // 配列を繰り返し、配列の値を標準出力します。
         for (int i = 0; i < rps.length; i++) {
             System.out.println(i + "：" + rps[i]);
         }
 
         System.out.println("番号を入力してください：");
 
-        // ユーザーが出す手を決めます。
-        int yourChoice = you.chooseHand(rps);
+        // ■ ユーザーが出す手を決めてください。
+        int yourChoice = you.chooseHand();
 
-        // コンピュータが出す手を決めます。
-        int computersChoice = computer.chooseHand(rps);
+        // ■ コンピュータが出す手を決めてください。
+        int computersChoice = computer.chooseHand();
 
-        // ■ 以下のコードをもとに、じゃんけんの結果によってプレイヤーインスタンスの値を変更してください。
+        // ■ ユーザーの勝ち負けを一時的に保存する変数を宣言してください。
+        // 真偽値 ユーザーが勝ったかどうか
+        boolean didYouWin;
+
+        // ■じゃんけんの結果によって以下の動作を行う機能を作成してください。
         // 機能詳細：
         //   ユーザーが勝った場合：
-        //     動作：以下の内容を標準出力及びユーザーの勝利回数カウントを＋1とする。
-        //     出力内容：勝ちました！
+        //     ・以下の内容を標準出力及びユーザーの勝利回数を＋1とする。
+        //         出力内容：勝ちました！
+        //     ・真偽値 ユーザーが勝ったかどうかにtrueを格納する。
         //   コンピューターが勝った場合：
-        //     動作：以下の内容を標準出力及びコンピューターの勝利回数カウントを＋1とする。
-        //     出力内容：負けました…
+        //     ・以下の内容を標準出力及びコンピューターの勝利回数を＋1とする。
+        //         出力内容：負けました…
+        //     ・真偽値 ユーザーが勝ったかどうかにfalseを格納する。
         //   無勝負の場合：
-        //     動作：以下の内容を標準出力する。
-        //     出力内容：あいこです。
+        //     ・以下の内容を標準出力する。
+        //         出力内容：あいこです。
+        //     ・以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
+        //         引数1：ユーザーが出す手
+        //         引数2：コンピュータが出す手
+        //         引数3：文字列「×」（文字列の配列「outcomes」より取得）
         if (yourChoice == computersChoice) {
             System.out.println("あいこです。");
+            return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[1]);
         } else {
             if (yourChoice == 0) {
                 if (computersChoice == 1) {
                     System.out.println("負けました…");
                     computer.win();
+                    didYouWin = false;
                 } else {
                     System.out.println("勝ちました！");
                     you.win();
+                    didYouWin = true;
                 }
             } else if (yourChoice == 1) {
                 if (computersChoice == 2) {
                     System.out.println("負けました…");
                     computer.win();
+                    didYouWin = false;
                 } else {
                     System.out.println("勝ちました！");
                     you.win();
+                    didYouWin = true;
                 }
             } else {
                 if (computersChoice == 0) {
                     System.out.println("負けました…");
                     computer.win();
+                    didYouWin = false;
                 } else {
                     System.out.println("勝ちました！");
                     you.win();
+                    didYouWin = true;
                 }
             }
         }
+
+        // ■ ユーザーの勝ち負けによって、以下の値を返却してください。
+        // 機能詳細：
+        //   ユーザーが勝った場合：
+        //     以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
+        //       引数1：ユーザーが出す手
+        //       引数2：コンピュータが出す手
+        //       引数3：文字列「〇」（文字列の配列「outcomes」より取得）
+        //   コンピューターが勝った場合：
+        //     以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
+        //       引数1：ユーザーが出す手
+        //       引数2：コンピュータが出す手
+        //       引数3：文字列「△」（文字列の配列「outcomes」より取得）
+        if (didYouWin) {
+            return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[0]);
+        }
+        return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[2]);
     }
 }
