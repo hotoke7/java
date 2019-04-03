@@ -36,16 +36,18 @@ public class GameManager {
 
             System.out.println("======================================");
 
+            // ■ 「isGameOver」メソッドより取得した結果によって、以下の処理を行う。
+            //   - trueの場合：繰り返しを終了し、reportMatchResult」メソッドを呼び出す。
+            //   - falseの場合：繰り返しを継続する。
             boolean isGameOver = isGameOver(you, computer);
             if (isGameOver) {
-                // ■ 「reportMatchResult」メソッドを実行し、すべてのゲーム記録を出力してください。
                 reportMatchResult(gameRecords, you, computer);
                 break;
             }
         }
     }
 
-    // 【問題】「isGameOver」メソッドを以下のように変更してください。
+    // 【問題】「isGameOver」メソッドを以下のように作成してください。
     // 引数1：ManualRpsPlayer ユーザー
     // 引数2：AutoRpsPlayer コンピューター
     // 返却値：真偽値 ゲームを終了するかどうか（詳細は動作の方で記載）
