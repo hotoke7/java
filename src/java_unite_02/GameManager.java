@@ -14,7 +14,7 @@ public class GameManager {
         // ■ じゃんけんゲームを行う、RockPaperScissorsクラスのインスタンスを作成してください。
         RockPaperScissors rockPaperScissors = new RockPaperScissors();
 
-        // ■ ゲームを繰り返した回数を格納する変数を宣言してください。
+        // ■ ゲーム回数を示す整数型の変数を宣言し、1で初期化してください。
         int gameCount = 1;
 
         // ■ ゲームの開始アナウンスを標準出力してください。
@@ -29,9 +29,9 @@ public class GameManager {
         // ・じゃんけん対決
         //   「RockPaperScissors」クラスの「play」メソッドを呼び出し、じゃんけん対決を行う。
         // ・ゲーム終了可否判定
-        //  「checkGameStatus」メソッドを呼び出し、その結果を取得する。
+        //  「isGameOver」メソッドを呼び出し、その結果を取得する。
         // ・ゲーム終了条件分岐作成
-        //  「checkGameStatus」メソッドより取得した結果によって、以下の処理を行う。
+        //  「isGameOver」メソッドより取得した結果によって、以下の処理を行う。
         //   - trueの場合：繰り返しを終了する。
         //   - falseの場合：「ゲーム回数」を１増やす。
         // ※ Tip
@@ -51,22 +51,22 @@ public class GameManager {
         }
     }
 
-    // 【問題】以下の動作をする「checkGameStatus」メソッドを作成してください。
+    // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
     // 引数1：Player ユーザー
     // 引数2：Player コンピューター
     // 返却値：真偽値 ゲームを終了するかどうか（詳細は動作の方で記載）
     //   ・true ゲームを終了する
     //   ・false ゲームを継続する
-    // 動作：各引数よりプレイヤーの勝利回数を取得し、その値によって以下の動作を行う。
+    // 動作：ユーザー、コンピューターの勝利回数を取得し、その値によって以下の動作を行う。
     // ・ユーザーの勝利回数が2の場合
-    //   以下の文字列を標準出力及び、trueを返却する。
+    //   以下の文字列を標準出力し、trueを返却する。
     //   出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で勝ちました！
     // ・コンピューターの勝利回数が2の場合
-    //   以下の文字列を標準出力及び、trueを返却する。
+    //   以下の文字列を標準出力し、trueを返却する。
     //   出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で負けました…
     // ・その他
-    //   falseを返却する。
-    public static boolean isGameOver(Player you, Player computer) {
+    //   ゲーム継続のため、falseを返却する。
+        public static boolean isGameOver(Player you, Player computer) {
         int yourWinCount = you.getWinCount();
         int computersWinCount = computer.getWinCount();
 
