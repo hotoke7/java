@@ -4,21 +4,24 @@ public class RockPaperScissors {
     // Lesson Java一貫③ じゃんけんゲーム③
     // 【問題】以下のソースコードをもとに、RockPaperScissorsクラスを問題に従って変更してください。
 
+    // じゃんけん配列
+    // 以下のコードで「グー」「パー」「チョキ」の文字列を配列を宣言します。
+    // アクセス修飾子をpublicで設定していますが、修正ができないようにstatic finalを付けました。
+    public static final String[] rps = {"グー", "パー", "チョキ"};
+
     // ■ 「play」メソッドの引数を変更してください。
     // 引数1：ManualRpsPlayer ユーザー
     // 引数2：AutoRpsPlayer コンピューター
     // 返却値：GameRecord ゲームの記録
     public GameRecord play(ManualRpsPlayer you, AutoRpsPlayer computer) {
-
-        // 「RpsStringArrays」クラスのインスタンスを宣言します。
-        // 「RpsStringArrays」クラスには、RPSゲームの中で使われるImmutable/Read-only属性の値が入っています。
-        RpsStringArrays rpsStringArrays = new RpsStringArrays();
-
-        // RpsStringArraysクラスから、「グー」「パー」「チョキ」の文字列の配列を取得します。
-        String[] rps = rpsStringArrays.getRps();
-
-        // RpsStringArraysクラスから、「〇」「△」「×」の文字列の配列を取得します。
-        String[] outcomes = rpsStringArrays.getOutcomes();
+        // ゲーム結果配列
+        // 以下の配列は、ゲームの結果を表す文字列を格納します。
+        // GameRecordクラスのインスタンスを宣言するときに、配列の中の文字列を引数として渡します。
+        // 各文字列の意味は以下の通りです。
+        // 〇：ユーザーの勝ち
+        // △：無勝負
+        // ×：コンピューターの勝ち
+        String[] outcomes = {"〇", "△", "×"};
 
         System.out.println("以下の選択肢の中で一つを選んでください。");
 

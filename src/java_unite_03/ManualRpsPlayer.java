@@ -31,11 +31,11 @@ public class ManualRpsPlayer extends Player implements RPSChoosable {
     // 返却値：整数型　ユーザーが出す手
     // ※ Hint
     // じゃんけん配列は以下のクラスから取得できます。
-    // RpsStringArrays
-    // 「RpsStringArrays」クラスのインスタンスを宣言し、「rps」フィールドを取得してください。
+    // RockPaperScissors
+    // 「RockPaperScissors」クラスのインスタンスを宣言し、「rps」フィールドを取得してください。
     public int chooseHand() {
-        RpsStringArrays rpsStringArrays = new RpsStringArrays();
-        String[] rps = rpsStringArrays.getRps();
+        RockPaperScissors rockPaperScissors = new RockPaperScissors();
+        String[] rps = rockPaperScissors.rps;
 
         int choice = scan.nextInt();
         System.out.println(getName() + "の選択 : " + rps[choice]);
