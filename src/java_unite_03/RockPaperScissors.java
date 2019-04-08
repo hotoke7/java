@@ -1,78 +1,70 @@
 package java_unite_03;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RockPaperScissors {
     // Lesson Java一貫③ じゃんけんゲーム③
-    // 【問題】以下のソースコードをもとに、RockPaperScissorsクラスを問題に従って変更してください。
+    // 【問題】RockPaperScissorsクラスを問題に従って変更してください。
 
-    // じゃんけん配列
-    // 以下のコードで「グー」「パー」「チョキ」の文字列を配列を宣言します。
-    // アクセス修飾子をpublicで設定していますが、修正ができないようにstatic finalを付けました。
-    public static final String[] rps = {"グー", "パー", "チョキ"};
+    // じゃんけんMap
+    public static final Map<Integer, String> rps = new HashMap<Integer, String>() {
+        {
+            put(1, "グー");
+            put(2, "パー");
+            put(3, "チョキ");
+        }
+    };
 
     // ■ 「play」メソッドの引数を変更してください。
     // 引数1：ManualRpsPlayer ユーザー
     // 引数2：AutoRpsPlayer コンピューター
-    // 返却値：GameRecord ゲームの記録
+    // 返却値：GameRecord ゲーム結果
     public GameRecord play(ManualRpsPlayer you, AutoRpsPlayer computer) {
-        // ゲーム結果配列
-        // 以下の配列は、ゲームの結果を表す文字列を格納します。
-        // GameRecordクラスのインスタンスを宣言するときに、配列の中の文字列を引数として渡します。
-        // 各文字列の意味は以下の通りです。
-        // 〇：ユーザーの勝ち
-        // △：無勝負
-        // ×：コンピューターの勝ち
-        String[] outcomes = {"〇", "△", "×"};
 
+        // ゲーム結果Map
+        Map<String, String> gameResults = new HashMap<String, String>() {
+            {
+                // ユーザーの勝ち
+                put("win", "〇");  // ユーザーの勝ち
+                put("draw", "△"); // ドロー
+                put("lose", "×"); //コンピューターの勝ち
+            }
+        };
+
+        // 選択肢の表示
         System.out.println("以下の選択肢の中で一つを選んでください。");
-
-        for (int i = 0; i < rps.length; i++) {
-            System.out.println(i + "：" + rps[i]);
+        for (Integer key : rps.keySet()) {
+            System.out.println(key.toString() + "：" + rps.get(key));
         }
-
         System.out.println("番号を入力してください：");
 
-        // ■ ユーザーが出す手を決めてください。
+        // ■ ユーザーのじゃんけんの手を取得してください。
         int yourChoice = you.chooseHand();
-
-        // ■ コンピュータが出す手を決めてください。
+        // ■ コンピュータのじゃんけんの手を取得してください。
         int computersChoice = computer.chooseHand();
 
-        // ■ ユーザーの勝ち負けを一時的に保存する変数を宣言してください。
-        // 真偽値 ユーザーが勝ったかどうか
+        // 勝敗フラグ
         boolean didYouWin;
 
         // ■じゃんけんの結果によって以下の動作を行う機能を作成してください。
         // 機能詳細：
-        //   ユーザーが勝った場合：
-        //     ・以下の内容を標準出力及びユーザーの勝利回数を＋1とする。
-        //         出力内容：勝ちました！
-        //     ・真偽値 ユーザーが勝ったかどうかにtrueを格納する。
-        //   コンピューターが勝った場合：
-        //     ・以下の内容を標準出力及びコンピューターの勝利回数を＋1とする。
-        //         出力内容：負けました…
-        //     ・真偽値 ユーザーが勝ったかどうかにfalseを格納する。
-        //   無勝負の場合：
-        //     ・以下の内容を標準出力する。
-        //         出力内容：あいこです。
-        //     ・以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
-        //         引数1：ユーザーが出す手
-        //         引数2：コンピュータが出す手
-        //         引数3：文字列「△」（文字列の配列「outcomes」より取得）
+        //   ユーザーの勝利：
+        //     ・ユーザが勝利した旨を標準出力し、ユーザの勝利回数を+1する。
+        //     ・勝敗フラグにtrueを格納する。
+        //
+        //   コンピューターの勝利：
+        //     ・コンピュータが勝利した旨を標準出力し、コンピュータの勝利回数を+1する。
+        //     ・勝敗フラグにfalseを格納する。
+        //
+        //   あいこ：
+        //     ・あいこの旨を標準出力する。
+        //     ・あいこに該当するGameRecordクラスのインスタンスを生成して返却する。
         if (yourChoice == computersChoice) {
             System.out.println("あいこです。");
-            return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[1]);
+            return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("draw"));
         } else {
-            if (yourChoice == 0) {
-                if (computersChoice == 1) {
-                    System.out.println("負けました…");
-                    computer.win();
-                    didYouWin = false;
-                } else {
-                    System.out.println("勝ちました！");
-                    you.win();
-                    didYouWin = true;
-                }
-            } else if (yourChoice == 1) {
+            if (yourChoice == 1) {
                 if (computersChoice == 2) {
                     System.out.println("負けました…");
                     computer.win();
@@ -82,8 +74,18 @@ public class RockPaperScissors {
                     you.win();
                     didYouWin = true;
                 }
+            } else if (yourChoice == 2) {
+                if (computersChoice == 3) {
+                    System.out.println("負けました…");
+                    computer.win();
+                    didYouWin = false;
+                } else {
+                    System.out.println("勝ちました！");
+                    you.win();
+                    didYouWin = true;
+                }
             } else {
-                if (computersChoice == 0) {
+                if (computersChoice == 1) {
                     System.out.println("負けました…");
                     computer.win();
                     didYouWin = false;
@@ -98,18 +100,13 @@ public class RockPaperScissors {
         // ■ ユーザーの勝ち負けによって、以下の値を返却してください。
         // 機能詳細：
         //   ユーザーが勝った場合：
-        //     以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
-        //       引数1：ユーザーが出す手
-        //       引数2：コンピュータが出す手
-        //       引数3：文字列「〇」（文字列の配列「outcomes」より取得）
+        //     ユーザーの勝利に該当するGameRecordクラスのインスタンスを生成して返却する。
+        //
         //   コンピューターが勝った場合：
-        //     以下の引数で「GameRecord」クラスのインスタンスを宣言して返却する。
-        //       引数1：ユーザーが出す手
-        //       引数2：コンピュータが出す手
-        //       引数3：文字列「×」（文字列の配列「outcomes」より取得）
+        //     コンピュータの勝利に該当するGameRecordクラスのインスタンスを生成して返却する。
         if (didYouWin) {
-            return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[0]);
+            return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("win"));
         }
-        return new GameRecord(rps[yourChoice], rps[computersChoice], outcomes[2]);
+        return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("lose"));
     }
 }
