@@ -79,7 +79,10 @@ public class GameManager {
     }
 
     // 【問題】ゲームの結果を出力する「reportMatchResult」メソッドを完成してください。
-    // ■ 「reportMatchResult」メソッドを以下の通り修正してください。
+    // ■ 「reportMatchResult」メソッドの引数を以下の通り変更してください。
+    // 引数1：「GameRecord」クラスのリスト ゲーム記録一覧
+    // 引数2：ManualRpsPlayer ユーザー
+    // 引数3：AutoRpsPlayer コンピューター
     /**
      * ゲームの記録を出力し、勝者を表示する。
      *

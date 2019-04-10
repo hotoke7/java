@@ -22,7 +22,10 @@ public class RockPaperScissors {
         }
     };
 
-    // ■ 「play」メソッドの引数を変更してください。
+    // ■ 「play」メソッドの引数と返却値を以下の通り変更してください。
+    // 引数1：ManualRpsPlayer ユーザー
+    // 引数2：AutoRpsPlayer コンピューター
+    // 返却値：GameRecord ゲーム結果
     /**
      * じゃんけんを行い、結果を標準出力する。
      *
