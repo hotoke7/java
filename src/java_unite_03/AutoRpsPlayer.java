@@ -10,8 +10,7 @@ import java.util.Random;
  * <p>
  * 【問題】
  * AutoRpsPlayerクラスを問題に従ってコードを作成してください。
- * 親クラス：Player
- * インターフェース：RpsChoosable
+ * 親クラスとインターフェースを設定してください。
  */
 public class AutoRpsPlayer {
 
