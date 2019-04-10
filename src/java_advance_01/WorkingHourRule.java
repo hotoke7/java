@@ -1,5 +1,8 @@
 package java_advance_01;
 
+/**
+ * 勤務時間の超過・未満を判断するクラス。
+ */
 public class WorkingHourRule {
 
     /**

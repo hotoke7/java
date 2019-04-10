@@ -3,10 +3,14 @@ package java_advance_02;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Lesson Java応用②（デバッグ）
+ * <p>
+ * 【問題】
+ * 以下のソースコードに潜んでいるバグを修正してください。
+ */
 public class DebugLessonOne {
 
-    // Lesson Java応用②（デバッグ）
-    // ■ 以下のソースコードに潜んでいるバグを修正してください。
     /**
      * 文字列の内容に応じて、標準出力処理を行う。
      *
