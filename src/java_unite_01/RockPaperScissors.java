@@ -4,22 +4,25 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * じゃんけんゲームを行うクラス
+ * Lesson Java一貫① じゃんけんゲーム①
+ * じゃんけんクラス。
+ *
+ * 【問題】
+ * 一発勝負のじゃんけんゲームを作成してください。
  */
 public class RockPaperScissors {
 
+    /** ランダム */
     static Random random = new Random();
+    /** スキャナ */
     static Scanner scan = new Scanner(System.in);
 
     /**
-     * じゃんけんゲームを実行するためのメインメソッド
+     * じゃんけんゲームを実行するメインメソッド。
      *
      * @param args -
      */
     public static void main(String[] args) {
-        // Lesson Java一貫① じゃんけんゲーム①
-        // 【問題】一発勝負のじゃんけんゲームを作成してください。
-
         // ■ ユーザーの選択値を格納する、整数型の変数を宣言してください。
         int yourChoice;
 

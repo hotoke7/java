@@ -1,13 +1,12 @@
 package java_basic_10;
 
 /**
- * 電気のリモコンを表すクラス
+ * 電気のリモコンを表すクラス。
  */
 public class LightRemoteControl implements RemoteControl {
+
     /**
-     * 抽象メソッド「turnOn」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * 電気をつけました。
+     * 電気をつけると標準出力する。
      */
     @Override
     public void turnOn() {
@@ -15,9 +14,7 @@ public class LightRemoteControl implements RemoteControl {
     }
 
     /**
-     * 抽象メソッド「turnOff」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * 電気を消しました。
+     * 電気を消すと標準出力する。
      */
     @Override
     public void turnOff() {

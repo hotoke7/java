@@ -1,15 +1,21 @@
 package java_basic_08;
 
 /**
- * レシートの注文詳細を表すクラス
+ * レシートの注文詳細を表すクラス。
  */
 public class OrderDetail {
+
+    /** 品名 */
     private String productName;
+    /** 値段 */
     private int price;
+    /** 数量 */
     private int quantity;
 
     /**
-     * 各フィールドに対して、受け取った引数で初期化処理を行う。
+     * コンストラクタ。
+     *
+     * フィールドの初期化処理を行う。
      *
      * @param productName 品名
      * @param price       値段
@@ -24,7 +30,7 @@ public class OrderDetail {
     /**
      * 品名を返却する。
      *
-     * @return 文字列 品名
+     * @return 品名
      */
     public String getProductName() {
         return productName;
@@ -33,7 +39,7 @@ public class OrderDetail {
     /**
      * 値段を返却する。
      *
-     * @return 整数型 値段
+     * @return 値段
      */
     public int getPrice() {
         return price;
@@ -42,7 +48,7 @@ public class OrderDetail {
     /**
      * 数量を返却する。
      *
-     * @return 整数型 数量
+     * @return 数量
      */
     public int getQuantity() {
         return quantity;

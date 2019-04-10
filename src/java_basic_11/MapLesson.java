@@ -3,6 +3,14 @@ package java_basic_11;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Lesson Java基礎⑪（Java基礎クラス）
+ *
+ * 【問題】
+ * マップを使用して処理を実行してください。
+ * 処理にはPetクラスを使用します。
+ *
+ */
 public class MapLesson {
     /**
      * 処理を実行するためのメインメソッド
@@ -10,16 +18,11 @@ public class MapLesson {
      * @param args -
      */
     public static void main(String[] args) {
-        // Lesson Java基礎⑪（Java基礎クラス）
-
-        // 【問題】マップを使ってみましょう。
-        // ※　Petクラスを利用します。
-
-        // ■ 上記のインスタンスを収納する「Map」を宣言してください。
-        // ※ キーはStringです。
+        // ■ Petを格納できるMapを宣言してください。
+        // キーの型はStringとしてください。
         Map<String, Pet> pets = new HashMap<>();
 
-        // ■ 新しく宣言したマップが空か判定し、その結果を標準出力してください。
+        // ■ 宣言したマップが空か判定し、その結果を標準出力してください。
         // 出力結果：
         // true
         System.out.println(pets.isEmpty());
@@ -29,8 +32,8 @@ public class MapLesson {
         Pet tama = new Pet("タマ", 1);
         Pet lemon = new Pet("レモン", 3);
 
-        // ■ 宣言したマップに上記のインスタンスを収納してください。
-        // Keyには「dog」「cat」「parrot」と設定してください。
+        // ■ 宣言したマップに上記Petクラスのインスタンスを格納してください。
+        // Keyは「dog」「cat」「parrot」としてください。
         pets.put("dog", kotarou);
         pets.put("cat", tama);
         pets.put("parrot", lemon);

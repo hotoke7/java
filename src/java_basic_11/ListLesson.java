@@ -3,18 +3,22 @@ package java_basic_11;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Lesson Java基礎⑪（Java基礎クラス）
+ *
+ * 【問題】
+ * リストを使用して処理を実行してください。
+ * 処理にはPetクラスを使用します。
+ *
+ */
 public class ListLesson {
+
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */
     public static void main(String[] args) {
-        // Lesson Java基礎⑪（Java基礎クラス）
-
-        // 【問題】リストを使ってみましょう。
-        // ※　Petクラスを利用します。
-
         // ■ Petのインスタンスを収納する「ArrayList」を宣言してください。
         List<Pet> pets = new ArrayList<>();
 

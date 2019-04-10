@@ -1,13 +1,16 @@
 package java_unite_02;
 
 /**
- * ゲームに参加するプレイヤーを表すクラス
+ * ゲームに参加するプレイヤーを表すクラス。
  */
 public class Player {
+    /** 勝利回数 */
     private int winCount;
 
     /**
-     * 勝利回数を0に初期化する。
+     * コンストラクタ。
+     *
+     * 勝利回数を0で初期化する。
      */
     public Player() {
         this.winCount = 0;
@@ -23,7 +26,7 @@ public class Player {
     /**
      * 勝利回数を返却する。
      *
-     * @return 整数型 勝利回数
+     * @return 勝利回数
      */
     public int getWinCount() {
         return winCount;

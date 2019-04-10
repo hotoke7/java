@@ -1,16 +1,19 @@
 package java_basic_11;
 
 /**
- * ペットを表すクラス
+ * ペットを表すクラス。
  */
 public class Pet {
-    // Lesson Java基礎⑪（Java基礎クラス）
-    // コレクションActivityに使うクラスを定義します。
+
+    /** 名前 */
     private String name;
+    /** 年齢 */
     private int age;
 
     /**
-     * 各ィールドに対して、受け取った引数で初期化処理を行う。
+     * コンストラクタ。
+     *
+     * フィールドの初期化を行う。
      *
      * @param name 名前
      * @param age  年齢
@@ -21,25 +24,25 @@ public class Pet {
     }
 
     /**
-     * 名前を返却するメソッド。
+     * 名前を返却する。
      *
-     * @return 文字列 名前
+     * @return 名前
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 年齢を返却するメソッド。
+     * 年齢を返却する。
      *
-     * @return 文字列 年齢
+     * @return 年齢
      */
     public int getAge() {
         return age;
     }
 
     /**
-     * 名前と年齢含む文字列を標準出力するメソッド。
+     * 自己紹介文を標準出力する。
      */
     public void intruduce() {
         System.out.println(name + "です。" + age + "才です。");

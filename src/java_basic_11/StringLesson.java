@@ -1,19 +1,25 @@
 package java_basic_11;
 
+/**
+ * Lesson Java基礎⑪（Java基礎クラス）
+ *
+ * 【問題】
+ * Stringを使用して処理を実行してください。
+ *
+ */
 public class StringLesson {
+
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */
     public static void main(String[] args) {
-        // Lesson Java基礎⑪（Java基礎クラス）
-        // 【問題】Stringクラスのメソッドを使ってみましょう。
-
-        // ■ 以下の文字列を持つString変数を宣言してください。
+        // ■ 以下の文字列のString変数を宣言してください。
         // 昼はカレーパンを食べました。
-        // 夕食ではグリーンカレーを食べる予定です。
         String lunch = "昼はカレーパンを食べました。";
+        // ■ 以下の文字列のString変数を宣言してください。
+        // 夕食ではグリーンカレーを食べる予定です。
         String dinner = "夕食ではグリーンカレーを食べる予定です。";
 
         // ■ 各文字列の長さを標準出力してください。

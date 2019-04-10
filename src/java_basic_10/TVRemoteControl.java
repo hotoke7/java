@@ -1,13 +1,12 @@
 package java_basic_10;
 
 /**
- * テレビのリモコンを表すクラス
+ * テレビのリモコンを表すクラス。
  */
 public class TVRemoteControl implements RemoteControl, VolumeAdjustable {
+
     /**
-     * 抽象メソッド「turnOn」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * テレビの電源をつけました。
+     * 電源をつけると標準出力する。
      */
     @Override
     public void turnOn() {
@@ -15,9 +14,7 @@ public class TVRemoteControl implements RemoteControl, VolumeAdjustable {
     }
 
     /**
-     * 抽象メソッド「turnOff」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * テレビの電源を消しました。
+     * 電源を消すと標準出力する。
      */
     @Override
     public void turnOff() {
@@ -25,9 +22,7 @@ public class TVRemoteControl implements RemoteControl, VolumeAdjustable {
     }
 
     /**
-     * 抽象メソッド「volumeUp」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * テレビの音量を上げました。
+     * 音量を上げると標準出力する。
      */
     @Override
     public void volumeUp() {
@@ -35,9 +30,7 @@ public class TVRemoteControl implements RemoteControl, VolumeAdjustable {
     }
 
     /**
-     * 抽象メソッド「volumeDown」をオーバライドし、文字列の標準出力処理を行う。
-     * 出力内容：
-     * テレビの音量を下げました。
+     * 音量を下げると標準出力する。
      */
     @Override
     public void volumeDown() {

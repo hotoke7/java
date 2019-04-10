@@ -1,15 +1,20 @@
 package java_basic_08;
 
 /**
- * レシートを表すクラス
+ * レシートを表すクラス。
  */
 public class Receipt {
+    /** 店名 */
     private String shopName;
+    /** 住所 */
     private String address;
+    /** 注文詳細配列 */
     private OrderDetail[] orderDetail;
 
     /**
-     * 各フィールドに対して、受け取った引数で初期化処理を行う。
+     * コンストラクタ。
+     *
+     * フィールドの初期化処理を行う。
      *
      * @param shopName    店名
      * @param address     住所
@@ -24,7 +29,7 @@ public class Receipt {
     /**
      * 店名を返却する。
      *
-     * @return 文字列 店名
+     * @return 店名
      */
     public String getShopName() {
         return shopName;
@@ -33,7 +38,7 @@ public class Receipt {
     /**
      * 住所を返却する。
      *
-     * @return 文字列 住所
+     * @return 住所
      */
     public String getAddress() {
         return address;
@@ -42,7 +47,7 @@ public class Receipt {
     /**
      * 注文詳細を返却する。
      *
-     * @return OrderDetail[] 注文詳細
+     * @return 注文詳細
      */
     public OrderDetail[] getOrderDetail() {
         return orderDetail;
@@ -51,7 +56,7 @@ public class Receipt {
     /**
      * すべての注文詳細の総額を計算して返却する。
      *
-     * @return 整数型 注文詳細の総額
+     * @return 注文詳細の総額
      */
     public int getTotalPrice() {
         int totalPrice = 0;

@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * ゲームマネージャクラス。
+ *
+ * Lesson Java一貫③ じゃんけんゲーム③
+ *
+ * 【問題】
+ * mainメソッドを完成させてください。
+ */
 public class GameManager {
     private static Scanner scan = new Scanner(System.in);
 
