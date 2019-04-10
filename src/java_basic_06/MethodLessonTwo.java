@@ -10,13 +10,19 @@ public class MethodLessonTwo {
     // 以下の手順に従って作成してください
     // 1．メソッド作成
     // 2. メソッドの呼び出し
+
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // 標準入力。入力された数字は、変数「number」に収納されます
         Scanner sc = new Scanner(System.in);
         System.out.print("数字を入力してください。\n：");
         int number = sc.nextInt();
 
-        for (int i = 1; i <= number; i++){
+        for (int i = 1; i <= number; i++) {
             // 2．メソッドの呼び出し
             // ■ 作成したメソッドを呼び出し、結果に応じて標準出力してください。
             if (isMultiple(i)) {
@@ -29,10 +35,14 @@ public class MethodLessonTwo {
 
     // 1．メソッド作成
     // ■ 以下の動作をするメソッドを作成してください
-    // 引数1：int 判定対象の数値
-    // 動作：数値が3の倍数、もしくは5の倍数かを判定する。
-    // 返却値：boolean 3もしくは5の倍数の場合true, 以外はfalse
-    public static boolean isMultiple(int number){
+
+    /**
+     * 引数が3の倍数、もしくは5の倍数かを判定し、判定結果を標準出力する。
+     *
+     * @param number 判定対象の数値
+     * @return boolean 3もしくは5の倍数の場合true, 以外はfalse
+     */
+    public static boolean isMultiple(int number) {
         if (number % 3 == 0 || number % 5 == 0) {
             return true;
         }

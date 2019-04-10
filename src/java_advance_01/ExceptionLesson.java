@@ -1,6 +1,11 @@
 package java_advance_01;
 
 public class ExceptionLesson {
+    /**
+     * 整数の内容に応じて、標準出力処理または例外処理をを行う。
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         WorkingHourRule workingHourRule = new WorkingHourRule();
         int[] workingHoursList = {6, 8, 11};

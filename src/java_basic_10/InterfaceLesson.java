@@ -1,6 +1,11 @@
 package java_basic_10;
 
 public class InterfaceLesson {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Java基礎⑩（インターフェース）
         // 【問題】作成した各クラスを使って、リモコンを操作してみましょう。

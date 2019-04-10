@@ -1,6 +1,11 @@
 package java_basic_08;
 
 public class ClassLesson {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Java基礎⑧（インスタンス、コンストラクタ）
 
@@ -52,14 +57,17 @@ public class ClassLesson {
 
     // 2. メソッド作成
     // ■ 以下の動作をするメソッドを作成してください。
-    // 引数1：Receipt
-    // 動作：レシートの店名・場所・総額を標準出力する。
-    // 返却値：なし
-    // 出力結果：
-    //   店名：焼肉ソナム
-    //   場所：自由が丘
-    //   総額：19900円
-    //   ======================================
+
+    /**
+     * 引数の内容を標準出力する。
+     * 出力結果（例）：
+     * 店名：焼肉ソナム
+     * 場所：自由が丘
+     * 総額：19900円
+     * ======================================
+     *
+     * @param receipt Receiptクラスのインスタンス
+     */
     public static void summary(Receipt receipt) {
         System.out.println("店名：" + receipt.getShopName());
         System.out.println("場所：" + receipt.getAddress());

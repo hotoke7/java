@@ -1,6 +1,11 @@
 package java_basic_11;
 
 public class StringLesson {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Lesson Java基礎⑪（Java基礎クラス）
         // 【問題】Stringクラスのメソッドを使ってみましょう。

@@ -1,6 +1,11 @@
 package java_basic_05;
 
 public class ArrayLesson {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Lesson Java基礎⑤（配列）
         // 配列を宣言する

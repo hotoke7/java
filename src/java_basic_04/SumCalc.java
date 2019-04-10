@@ -1,6 +1,11 @@
 package java_basic_04;
 
 public class SumCalc {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
 
         // Lesson Java基礎④（繰り返し）

@@ -3,6 +3,9 @@ package java_unite_02;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * じゃんけんゲームの進行を管理するクラス
+ */
 public class RockPaperScissors {
     private Random random = new Random();
     private Scanner scan = new Scanner(System.in);
@@ -11,8 +14,13 @@ public class RockPaperScissors {
     // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
 
     // ■ 「play」メソッドに引数を追加してください。
-    // 引数1：Player ユーザー
-    // 引数2：Player コンピューター
+
+    /**
+     * 入力された値とRandom値に応じて、プレイヤークラスのインスタンスのメソッドを呼び出し、文字列を標準出力する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     */
     public void play(Player you, Player computer) {
         // サイズが３の文字列の配列を宣言し、「グー」「パー」「チョキ」の文字列を配列に格納します。
         String[] rps = new String[3];

@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListLesson {
+    /**
+     * 処理を実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Lesson Java基礎⑪（Java基礎クラス）
 

@@ -7,8 +7,12 @@ import java.util.Random;
 // 【問題】AutoRpsPlayerクラスを問題に従ってコードを作成してください。
 
 // ■ AutoRpsPlayerクラスを完成してください。
-// 親クラス：Player
-// インターフェース：RpsChoosable
+
+/**
+ * コンピューターを表すクラス
+ * 親クラス：Player
+ * インターフェース：RpsChoosable
+ */
 public class AutoRpsPlayer extends Player implements RPSChoosable {
     private Random random = new Random();
 
@@ -30,6 +34,8 @@ public class AutoRpsPlayer extends Player implements RPSChoosable {
     //
     // ※ Hint
     // 手の出力は、RockPaperScissorsクラスのじゃんけんMapを使用する。
+
+
     @Override
     public int chooseHand() {
         Map<Integer, String> rps = RockPaperScissors.rps;

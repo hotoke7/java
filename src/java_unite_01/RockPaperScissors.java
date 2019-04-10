@@ -3,11 +3,19 @@ package java_unite_01;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * じゃんけんゲームを行うクラス
+ */
 public class RockPaperScissors {
 
     static Random random = new Random();
     static Scanner scan = new Scanner(System.in);
 
+    /**
+     * じゃんけんゲームを実行するためのメインメソッド
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // Lesson Java一貫① じゃんけんゲーム①
         // 【問題】一発勝負のじゃんけんゲームを作成してください。

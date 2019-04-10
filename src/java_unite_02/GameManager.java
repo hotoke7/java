@@ -4,6 +4,13 @@ public class GameManager {
     // Lesson Java一貫② じゃんけんゲーム②
 
     // 【問題】以下のソースコードをもとに、mainメソッドを完成してください。
+
+    /**
+     * じゃんけんゲームを実施するメインメソッド
+     * ゲームの終了判定が出るまで、じゃんけんゲームを繰り返す。
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // ■ ユーザーを示す、Playerクラスのインスタンスを宣言してください。
         Player you = new Player();
@@ -52,21 +59,26 @@ public class GameManager {
     }
 
     // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
-    // 引数1：Player ユーザー
-    // 引数2：Player コンピューター
-    // 返却値：真偽値 ゲームを終了するかどうか（詳細は動作の方で記載）
-    //   ・true ゲームを終了する
-    //   ・false ゲームを継続する
-    // 動作：ユーザー、コンピューターの勝利回数を取得し、その値によって以下の動作を行う。
-    // ・ユーザーの勝利回数が2の場合
-    //   以下の文字列を標準出力し、trueを返却する。
-    //   出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で勝ちました！
-    // ・コンピューターの勝利回数が2の場合
-    //   以下の文字列を標準出力し、trueを返却する。
-    //   出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で負けました…
-    // ・その他
-    //   ゲーム継続のため、falseを返却する。
-        public static boolean isGameOver(Player you, Player computer) {
+
+    /**
+     * ゲームが終了したかを判定して、判定の結果を返却するメソッド
+     * ユーザー、コンピューターの勝利回数を取得し、その値によって以下の動作を行う。
+     * ・ユーザーの勝利回数が2の場合
+     * 　以下の文字列を標準出力し、trueを返却する。
+     * 　出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で勝ちました！
+     * ・コンピューターの勝利回数が2の場合
+     * 　以下の文字列を標準出力し、trueを返却する。
+     * 　出力内容：「ユーザーの勝利回数」：「コンピューターの勝利回数」で負けました…
+     * ・その他
+     * 　ゲーム継続のため、falseを返却する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     * @return 真偽値 ゲームを終了するかどうか
+     * ・true ゲームを終了する
+     * ・false ゲームを継続する
+     */
+    public static boolean isGameOver(Player you, Player computer) {
         int yourWinCount = you.getWinCount();
         int computersWinCount = computer.getWinCount();
 
