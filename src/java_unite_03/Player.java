@@ -11,8 +11,9 @@ package java_unite_03;
 public class Player {
 
     // ■ プレイヤーの名前を表す以下のフィールドを追加してください。
-    // 文字列型　名前
+    /** 名前 */
     private String name;
+    /** 勝利回数 */
     private int winCount;
 
     // ■ コンストラクタを以下のように修正してください。
