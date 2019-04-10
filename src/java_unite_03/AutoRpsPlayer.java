@@ -12,10 +12,11 @@ import java.util.Random;
  * AutoRpsPlayerクラスを問題に従ってコードを作成してください。
  */
 public class AutoRpsPlayer extends Player implements RPSChoosable {
+
+    /** ランダム */
     private Random random = new Random();
 
     // ■ コンストラクタを作成してください。
-
     /**
      * コンストラクタ。
      * <p>
@@ -30,7 +31,6 @@ public class AutoRpsPlayer extends Player implements RPSChoosable {
     // ■ 「chooseHand」メソッドをオーバライドして作成してください。
     // ※ Hint
     // 手の出力は、RockPaperScissorsクラスのじゃんけんMapを使用する。
-
     /**
      * じゃんけんの手を決定する。
      * <p>

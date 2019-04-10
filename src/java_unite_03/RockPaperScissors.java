@@ -6,18 +6,14 @@ import java.util.Map;
 /**
  * じゃんけんクラス。
  * <p>
- * Lesson Java一貫② じゃんけんゲーム②
+ * Lesson Java一貫③ じゃんけんゲーム②
  * <p>
  * 【問題】
- * playメソッドを完成してください。
+ * RockPaperScissorsクラスを問題に従って変更してください。
  */
 public class RockPaperScissors {
-    // Lesson Java一貫③ じゃんけんゲーム③
-    // 【問題】RockPaperScissorsクラスを問題に従って変更してください。
 
-    /**
-     * じゃんけんMap
-     */
+    /** じゃんけんMap */
     public static final Map<Integer, String> rps = new HashMap<Integer, String>() {
         {
             put(1, "グー");
@@ -27,7 +23,6 @@ public class RockPaperScissors {
     };
 
     // ■ 「play」メソッドの引数を変更してください。
-
     /**
      * じゃんけんを行い、結果を標準出力する。
      *

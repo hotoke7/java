@@ -5,17 +5,11 @@ package java_basic_08;
  */
 public class OrderDetail {
 
-    /**
-     * 品名
-     */
+    /** 品名 */
     private String productName;
-    /**
-     * 値段
-     */
+    /** 値段 */
     private int price;
-    /**
-     * 数量
-     */
+    /** 数量 */
     private int quantity;
 
     /**

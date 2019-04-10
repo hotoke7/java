@@ -54,7 +54,6 @@ public class GameManager {
 
 
     // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
-
     /**
      * ゲームが終了したかを判定する。
      * <p>

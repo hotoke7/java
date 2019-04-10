@@ -5,13 +5,9 @@ package java_basic_10;
  */
 public interface VolumeAdjustable {
 
-    /**
-     * 音量を上げる。
-     */
+    /** 音量を上げる。 */
     void volumeUp();
 
-    /**
-     * 音量を下げる。
-     */
+    /** 音量を下げる。 */
     void volumeDown();
 }

@@ -4,6 +4,7 @@ package java_unite_03;
  * ゲームに参加するプレイヤーを表すクラス
  */
 public class Player {
+
     // Lesson Java一貫③ じゃんけんゲーム③
     // 【問題】Playerクラスを問題に従ってコードを作成してください。
 
@@ -13,7 +14,6 @@ public class Player {
     private int winCount;
 
     // ■ コンストラクタを以下のように修正してください。
-
     /**
      * 各フィールドに対して初期化処理を行う。
      * 名前：引数で初期化
@@ -34,7 +34,6 @@ public class Player {
     }
 
     // ■ 名前のGetterを作成してください。
-
     /**
      * 名前を返却する。
      *

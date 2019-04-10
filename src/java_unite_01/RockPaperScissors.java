@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Lesson Java一貫① じゃんけんゲーム①
+ * <p>
  * じゃんけんクラス。
  * <p>
  * 【問題】
@@ -12,13 +13,9 @@ import java.util.Scanner;
  */
 public class RockPaperScissors {
 
-    /**
-     * ランダム
-     */
+    /** ランダム */
     static Random random = new Random();
-    /**
-     * スキャナ
-     */
+    /** スキャナ */
     static Scanner scan = new Scanner(System.in);
 
     /**

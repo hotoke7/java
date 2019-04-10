@@ -4,9 +4,7 @@ package java_unite_02;
  * ゲームに参加するプレイヤーを表すクラス。
  */
 public class Player {
-    /**
-     * 勝利回数
-     */
+    /** 勝利回数 */
     private int winCount;
 
     /**

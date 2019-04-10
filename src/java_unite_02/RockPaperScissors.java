@@ -13,17 +13,12 @@ import java.util.Scanner;
  */
 public class RockPaperScissors {
 
-    /**
-     * ランダム
-     */
+    /** ランダム */
     private Random random = new Random();
-    /**
-     * スキャナ
-     */
+    /** スキャナ */
     private Scanner scan = new Scanner(System.in);
 
     // ■ 「play」メソッドに引数を追加してください。
-
     /**
      * じゃんけんを行い、結果を標準出力する。
      *

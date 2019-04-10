@@ -9,7 +9,6 @@ package java_basic_01;
 public class HelloWorld {
 
     // ■ "Hello World"を標準出力してください。
-
     /**
      * 処理を実行するためのメインメソッド。
      *

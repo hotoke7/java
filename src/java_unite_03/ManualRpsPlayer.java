@@ -3,9 +3,6 @@ package java_unite_03;
 import java.util.Map;
 import java.util.Scanner;
 
-// Lesson Java一貫③ じゃんけんゲーム③
-// 【問題】ManualRpsPlayerクラスを問題に従ってコードを作成してください。
-
 /**
  * ユーザーを表すクラス。
  * <p>
@@ -15,10 +12,11 @@ import java.util.Scanner;
  * ManualRpsPlayerクラス問題に従ってコードを作成してください。
  */
 public class ManualRpsPlayer extends Player implements RPSChoosable {
+
+    /** スキャナ */
     private Scanner scan = new Scanner(System.in);
 
     // ■ コンストラクタを作成してください。
-
     /**
      * コンストラクタ。
      * <p>
@@ -33,7 +31,6 @@ public class ManualRpsPlayer extends Player implements RPSChoosable {
     // ■ 「chooseHand」メソッドをオーバライドして作成してください。
     // ※ Hint
     // 手の出力は、RockPaperScissorsクラスのじゃんけんMapを使用する。
-
     /**
      * じゃんけんの手を決定する。
      * <p>

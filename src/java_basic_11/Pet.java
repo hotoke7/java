@@ -5,13 +5,9 @@ package java_basic_11;
  */
 public class Pet {
 
-    /**
-     * 名前
-     */
+    /** 名前 */
     private String name;
-    /**
-     * 年齢
-     */
+    /** 年齢 */
     private int age;
 
     /**

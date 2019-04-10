@@ -41,7 +41,6 @@ public class StringLesson {
         System.out.println(dateString.substring(5, 7));
         System.out.println(dateString.substring(8, 10));
 
-
         // ■ 以下の文字列を宣言してください。
         // lorem ipsum dolor sit amet lolem
         String lorem = "lorem ipsum dolor sit amet lorem";

@@ -4,8 +4,12 @@ package java_unite_03;
  * ゲーム結果格納クラス。
  */
 public class GameRecord {
+
+    /** ユーザの手 */
     private String yourHand;
+    /** コンピュータの手 */
     private String computersHand;
+    /** ゲーム結果 */
     private String gameResult;
 
     /**

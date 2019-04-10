@@ -4,7 +4,7 @@ package java_basic_09;
  * スマートフォンを表すクラス。
  */
 public class SmartPhone extends Telephone {
-
+    
     /**
      * コンストラクタ。
      * <p>
