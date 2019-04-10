@@ -2,7 +2,6 @@ package java_basic_10;
 
 /**
  * リモコンを表すインターフェース。
- *
  */
 interface RemoteControl {
 

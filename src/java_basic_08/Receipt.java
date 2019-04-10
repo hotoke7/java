@@ -4,16 +4,22 @@ package java_basic_08;
  * レシートを表すクラス。
  */
 public class Receipt {
-    /** 店名 */
+    /**
+     * 店名
+     */
     private String shopName;
-    /** 住所 */
+    /**
+     * 住所
+     */
     private String address;
-    /** 注文詳細配列 */
+    /**
+     * 注文詳細配列
+     */
     private OrderDetail[] orderDetail;
 
     /**
      * コンストラクタ。
-     *
+     * <p>
      * フィールドの初期化処理を行う。
      *
      * @param shopName    店名

@@ -3,11 +3,21 @@ package java_unite_03;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * じゃんけんクラス。
+ * <p>
+ * Lesson Java一貫② じゃんけんゲーム②
+ * <p>
+ * 【問題】
+ * playメソッドを完成してください。
+ */
 public class RockPaperScissors {
     // Lesson Java一貫③ じゃんけんゲーム③
     // 【問題】RockPaperScissorsクラスを問題に従って変更してください。
 
-    // じゃんけんMap
+    /**
+     * じゃんけんMap
+     */
     public static final Map<Integer, String> rps = new HashMap<Integer, String>() {
         {
             put(1, "グー");
@@ -17,9 +27,14 @@ public class RockPaperScissors {
     };
 
     // ■ 「play」メソッドの引数を変更してください。
-    // 引数1：ManualRpsPlayer ユーザー
-    // 引数2：AutoRpsPlayer コンピューター
-    // 返却値：GameRecord ゲーム結果
+
+    /**
+     * じゃんけんを行い、結果を標準出力する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     * @return ゲーム結果
+     */
     public GameRecord play(ManualRpsPlayer you, AutoRpsPlayer computer) {
 
         // ゲーム結果Map

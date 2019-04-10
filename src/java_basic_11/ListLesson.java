@@ -5,11 +5,10 @@ import java.util.List;
 
 /**
  * Lesson Java基礎⑪（Java基礎クラス）
- *
+ * <p>
  * 【問題】
  * リストを使用して処理を実行してください。
  * 処理にはPetクラスを使用します。
- *
  */
 public class ListLesson {
 

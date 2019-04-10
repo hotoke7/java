@@ -11,9 +11,9 @@ public class GameRecord {
     /**
      * 初期化処理。
      *
-     * @param yourHand ユーザの手（グー、パー、チョキ）
+     * @param yourHand      ユーザの手（グー、パー、チョキ）
      * @param computersHand コンピュータの手（グー、パー、チョキ）
-     * @param gameResult ゲーム結果（○、△、×）
+     * @param gameResult    ゲーム結果（○、△、×）
      */
     public GameRecord(String yourHand, String computersHand, String gameResult) {
         this.yourHand = yourHand;

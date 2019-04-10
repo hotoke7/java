@@ -4,22 +4,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * ゲームマネージャクラス。
- *
+ * じゃんけんクラス。
+ * <p>
  * Lesson Java一貫② じゃんけんゲーム②
- *
+ * <p>
  * 【問題】
  * playメソッドを完成してください。
- *
  */
 public class RockPaperScissors {
 
-    /** ランダム */
+    /**
+     * ランダム
+     */
     private Random random = new Random();
-    /** スキャナ */
+    /**
+     * スキャナ
+     */
     private Scanner scan = new Scanner(System.in);
 
     // ■ 「play」メソッドに引数を追加してください。
+
     /**
      * じゃんけんを行い、結果を標準出力する。
      *

@@ -8,9 +8,9 @@ public class PayPhone extends Telephone {
 
     /**
      * コンストラクタ。
-     *
+     * <p>
      * 電話番号と残高を以下の通り初期化する。
-     *
+     * <p>
      * 電話番号：引数
      * 残高：0
      *
@@ -23,13 +23,13 @@ public class PayPhone extends Telephone {
 
     /**
      * 電話をかける。
-     *
+     * <p>
      * 残高に応じて以下の処理を行う。
      * <p>
      * 残高が10円以上の場合
-     *   ・電話をかけ、残高から10円を引く。
+     * ・電話をかけ、残高から10円を引く。
      * 残高が10円未満の場合
-     *   ・残高が足りない旨標準出力する。
+     * ・残高が足りない旨標準出力する。
      *
      * @param targetNumber 相手の電話番号
      */
@@ -44,10 +44,9 @@ public class PayPhone extends Telephone {
         balance -= 10;
     }
 
-
     /**
      * 電話を切る。
-     *
+     * <p>
      * 以下の処理を行う。
      * <p>
      * ・電話を切り、お釣りを返却する旨標準出力する
@@ -62,7 +61,7 @@ public class PayPhone extends Telephone {
 
     /**
      * 残高の加算処理。
-     *
+     * <p>
      * 引数の値を残高に加算し、現在残高を標準出力する。
      *
      * @param money 投入金額

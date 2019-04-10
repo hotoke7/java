@@ -1,11 +1,11 @@
 package java_unite_03;
 
 /**
- * プレイヤーのじゃんけんの選択を表すインターフェース
+ * プレイヤーのじゃんけんの選択を表すインターフェース。
  */
 public interface RPSChoosable {
     /**
-     * プレイヤーの選択を示す抽象メソッド
+     * プレイヤーが出す手を選択する。
      */
     int chooseHand();
 }

@@ -2,10 +2,9 @@ package java_basic_11;
 
 /**
  * Lesson Java基礎⑪（Java基礎クラス）
- *
+ * <p>
  * 【問題】
  * Stringを使用して処理を実行してください。
- *
  */
 public class StringLesson {
 

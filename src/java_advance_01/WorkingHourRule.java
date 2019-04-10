@@ -4,7 +4,7 @@ public class WorkingHourRule {
 
     /**
      * 引数の勤務時間が、定時の勤務時間かをチェックする。
-     *
+     * <p>
      * チェックの仕様は以下の通り。
      * - 勤務時間が8時間の場合：処理終了
      * - 勤務時間が8時間超過の場合：OverTimeExceptionを送出

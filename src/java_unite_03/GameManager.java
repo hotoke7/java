@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 /**
  * ゲームマネージャクラス。
- *
+ * <p>
  * Lesson Java一貫③ じゃんけんゲーム③
- *
+ * <p>
  * 【問題】
  * mainメソッドを完成させてください。
  */
@@ -52,17 +52,24 @@ public class GameManager {
         }
     }
 
-    // 【問題】「isGameOver」メソッドを以下のように作成してください。
-    // 引数1：ManualRpsPlayer ユーザー
-    // 引数2：AutoRpsPlayer コンピューター
-    // 返却値：真偽値 ゲームを終了するかどうか
-    //   ・true ゲームを終了する
-    //   ・false ゲームを継続する
-    // 動作：ユーザー、コンピューターの勝利回数に応じて、以下の動作を行う。
-    // ・ユーザー、またはコンピューターのいずれかの勝利回数が2の場合
-    //   trueを返却する。
-    // ・それ以外
-    //   falseを返却する。
+
+    // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
+
+    /**
+     * ゲームが終了したかを判定する。
+     * <p>
+     * ユーザー、コンピューターの勝利回数に応じて、以下の通り処理を行う。
+     * <p>
+     * ・ユーザー、またはコンピューターのいずれかの勝利回数が2の場合
+     * 　ゲーム終了のため、trueを返却する。
+     * <p>
+     * ・上記以外
+     * 　ゲーム継続のため、falseを返却する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     * @return ゲームの終了判定結果 true:ゲームを終了する false:ゲームを継続する
+     */
     public static boolean isGameOver(ManualRpsPlayer you, AutoRpsPlayer computer) {
         int yourWinCount = you.getWinCount();
         int computersWinCount = computer.getWinCount();

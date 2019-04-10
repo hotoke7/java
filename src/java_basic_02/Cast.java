@@ -2,7 +2,7 @@ package java_basic_02;
 
 /**
  * Lesson Java基礎②（変数/型/キャスト）
- *
+ * <p>
  * 【問題】
  * キャストしてください。
  */

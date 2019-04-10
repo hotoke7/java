@@ -8,7 +8,7 @@ public class Telephone {
 
     /**
      * コンストラクタ。
-     *
+     * <p>
      * 電話番号を初期化する。
      *
      * @param phoneNumber 電話番号
