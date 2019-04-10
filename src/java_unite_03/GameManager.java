@@ -52,7 +52,6 @@ public class GameManager {
         }
     }
 
-
     // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
     /**
      * ゲームが終了したかを判定する。
@@ -81,11 +80,13 @@ public class GameManager {
 
     // 【問題】ゲームの結果を出力する「reportMatchResult」メソッドを完成してください。
     // ■ 「reportMatchResult」メソッドを以下の通り修正してください。
-    // 引数1：「GameRecord」クラスのリスト ゲーム記録一覧
-    // 引数2：ManualRpsPlayer ユーザー
-    // 引数3：AutoRpsPlayer コンピューター
-    // 動作：すべてのゲームの記録を出力し、勝者を表示。
-    // 返却値：なし
+    /**
+     * ゲームの記録を出力し、勝者を表示する。
+     *
+     * @param gameRecords ゲーム記録一覧
+     * @param you         ユーザー
+     * @param computer    コンピューター
+     */
     public static void reportMatchResult(List<GameRecord> gameRecords, ManualRpsPlayer you, AutoRpsPlayer computer) {
 
         // ■ ゲーム回数を示す整数型の変数を宣言し、1で初期化してください。
