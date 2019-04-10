@@ -31,18 +31,8 @@ public class ExceptionLesson {
             //   ・例外からメッセージを取得し、標準出力する
             // ・例外「EarlyLeaveException」が発生した場合
             //   ・例外「OvertimeException」が発生時と同様の処理を行う
-            try {
-                workingHourRule.checkRegularTime(workingHours);
-                System.out.println("定時帰りです。");
-            } catch (OvertimeException e) {
-                e.printStackTrace();
-                String overtimeMessage = e.getMessage();
-                System.out.println(overtimeMessage);
-            } catch (EarlyLeaveException e) {
-                e.printStackTrace();
-                String earlyLeaveMessage = e.getMessage();
-                System.out.println(earlyLeaveMessage);
-            }
+
+
             System.out.println("===================================");
         }
     }

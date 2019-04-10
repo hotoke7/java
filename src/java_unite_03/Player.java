@@ -11,8 +11,10 @@ package java_unite_03;
 public class Player {
 
     // ■ プレイヤーの名前を表す以下のフィールドを追加してください。
+    // 文字列型　名前
     /** 名前 */
-    private String name;
+
+
     /** 勝利回数 */
     private int winCount;
 
@@ -25,7 +27,8 @@ public class Player {
      * @param name 名前
      */
     public Player(String name) {
-        this.name = name;
+
+
         this.winCount = 0;
     }
 
@@ -42,9 +45,7 @@ public class Player {
      *
      * @return 名前
      */
-    public String getName() {
-        return name;
-    }
+
 
     /**
      * 勝利回数を返却する。

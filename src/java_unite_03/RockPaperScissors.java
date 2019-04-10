@@ -33,7 +33,7 @@ public class RockPaperScissors {
      * @param computer コンピューター
      * @return ゲーム結果
      */
-    public GameRecord play(ManualRpsPlayer you, AutoRpsPlayer computer) {
+    public void play() {
 
         // ゲーム結果Map
         Map<String, String> gameResults = new HashMap<String, String>() {
@@ -53,9 +53,10 @@ public class RockPaperScissors {
         System.out.println("番号を入力してください：");
 
         // ■ ユーザーのじゃんけんの手を取得してください。
-        int yourChoice = you.chooseHand();
+
+
         // ■ コンピュータのじゃんけんの手を取得してください。
-        int computersChoice = computer.chooseHand();
+
 
         // 勝敗フラグ
         boolean didYouWin;
@@ -73,42 +74,7 @@ public class RockPaperScissors {
         //   あいこ：
         //     ・あいこの旨を標準出力する。
         //     ・あいこに該当するGameRecordクラスのインスタンスを生成して返却する。
-        if (yourChoice == computersChoice) {
-            System.out.println("あいこです。");
-            return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("draw"));
-        } else {
-            if (yourChoice == 1) {
-                if (computersChoice == 2) {
-                    System.out.println("負けました…");
-                    computer.win();
-                    didYouWin = false;
-                } else {
-                    System.out.println("勝ちました！");
-                    you.win();
-                    didYouWin = true;
-                }
-            } else if (yourChoice == 2) {
-                if (computersChoice == 3) {
-                    System.out.println("負けました…");
-                    computer.win();
-                    didYouWin = false;
-                } else {
-                    System.out.println("勝ちました！");
-                    you.win();
-                    didYouWin = true;
-                }
-            } else {
-                if (computersChoice == 1) {
-                    System.out.println("負けました…");
-                    computer.win();
-                    didYouWin = false;
-                } else {
-                    System.out.println("勝ちました！");
-                    you.win();
-                    didYouWin = true;
-                }
-            }
-        }
+
 
         // ■ ユーザーの勝ち負けによって、以下の値を返却してください。
         // 機能詳細：
@@ -117,9 +83,7 @@ public class RockPaperScissors {
         //
         //   コンピューターが勝った場合：
         //     コンピュータの勝利に該当するGameRecordクラスのインスタンスを生成して返却する。
-        if (didYouWin) {
-            return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("win"));
-        }
-        return new GameRecord(rps.get(yourChoice), rps.get(computersChoice), gameResults.get("lose"));
+
+
     }
 }

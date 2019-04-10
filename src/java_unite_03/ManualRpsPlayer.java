@@ -10,8 +10,10 @@ import java.util.Scanner;
  * <p>
  * 【問題】
  * ManualRpsPlayerクラス問題に従ってコードを作成してください。
+ * 親クラス：Player
+ * インターフェース：RpsChoosable
  */
-public class ManualRpsPlayer extends Player implements RPSChoosable {
+public class ManualRpsPlayer {
 
     /** スキャナ */
     private Scanner scan = new Scanner(System.in);
@@ -24,9 +26,7 @@ public class ManualRpsPlayer extends Player implements RPSChoosable {
      *
      * @param name 名前
      */
-    public ManualRpsPlayer(String name) {
-        super(name);
-    }
+
 
     // ■ 「chooseHand」メソッドをオーバライドして作成してください。
     // ※ Hint
@@ -42,12 +42,6 @@ public class ManualRpsPlayer extends Player implements RPSChoosable {
      *
      * @return じゃんけんの手
      */
-    @Override
-    public int chooseHand() {
-        Map<Integer, String> rps = RockPaperScissors.rps;
 
-        int choice = scan.nextInt();
-        System.out.println(getName() + "の選択 : " + rps.get(choice));
-        return choice;
-    }
+
 }

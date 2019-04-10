@@ -43,8 +43,8 @@ public class DebugLessonOne {
      */
     public static void stringCutter(List<String> stringList) {
         for (String str : stringList) {
-            if (str.substring(0, 4).equals("LIST")) {
-                System.out.println(str.substring(5));
+            if (str.substring(1, 4).equals("LIST")) {
+                System.out.println(str.substring(6));
             } else {
                 System.out.println("不正データ");
             }

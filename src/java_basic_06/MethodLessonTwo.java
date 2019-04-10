@@ -29,11 +29,8 @@ public class MethodLessonTwo {
         for (int i = 1; i <= number; i++) {
             // 2．メソッドの呼び出し
             // ■ 作成したメソッドを呼び出し、結果に応じて標準出力してください。
-            if (isMultiple(i)) {
-                System.out.println("-");
-            } else {
-                System.out.println(i);
-            }
+
+
         }
     }
 
@@ -45,14 +42,6 @@ public class MethodLessonTwo {
      * @param number 判定対象の数値
      * @return 3もしくは5の倍数の場合true, 以外はfalse
      */
-    public static boolean isMultiple(int number) {
-        if (number % 3 == 0 || number % 5 == 0) {
-            return true;
-        }
-        return false;
 
-        // 以下のように簡略化してコードを書くことも出来ます。
-        // 見た目は違うコードですが、処理している内容は全く同じです。
-        // return num % 3 == 0 || num % 5 == 0;
-    }
+
 }

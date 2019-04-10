@@ -26,7 +26,7 @@ public class DebugLessonTwo {
         // 28
         // 496
         // 3個です。
-        for (int number = 2; number <= 1000; number++) {
+        for (int number = 0; number <= 1000; number++) {
             if (judgeCondition(number)) {
                 System.out.println(number);
                 count++;
@@ -49,18 +49,18 @@ public class DebugLessonTwo {
         int sum = 0;
 
         // target自身を含まない整数を繰り返す
-        for (int i = 1; i < target; i++) {
+        for (int i = 0; i <= target; i++) {
             // 剰余算の結果が0の場合、約数
-            remain = target % i;
+            remain = target / i;
             if (remain == 0) {
-                sum += i;
+                sum = i;
             }
         }
 
         // 対象と約数の合計が同じ場合、条件にマッチ
         if (target == sum) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

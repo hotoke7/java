@@ -29,7 +29,8 @@ public class MethodLessonOne {
 
         // 2．メソッドの呼び出し
         // ■ 作成したメソッドを呼び出してください
-        isPrimeNumber(number);
+
+
     }
 
     // 1．メソッド作成
@@ -39,18 +40,5 @@ public class MethodLessonOne {
      *
      * @param number 判定対象の数値
      */
-    public static void isPrimeNumber(int number) {
-        boolean isPrimeNumber = true;
 
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0) {
-                isPrimeNumber = false;
-            }
-        }
-        if (isPrimeNumber) {
-            System.out.println(number + "は素数です。");
-        } else {
-            System.out.println(number + "は素数ではありません。");
-        }
-    }
 }

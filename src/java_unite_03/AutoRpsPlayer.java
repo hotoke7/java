@@ -10,8 +10,10 @@ import java.util.Random;
  * <p>
  * 【問題】
  * AutoRpsPlayerクラスを問題に従ってコードを作成してください。
+ * 親クラス：Player
+ * インターフェース：RpsChoosable
  */
-public class AutoRpsPlayer extends Player implements RPSChoosable {
+public class AutoRpsPlayer {
 
     /** ランダム */
     private Random random = new Random();
@@ -24,9 +26,8 @@ public class AutoRpsPlayer extends Player implements RPSChoosable {
      *
      * @param name 名前
      */
-    public AutoRpsPlayer(String name) {
-        super(name);
-    }
+
+
 
     // ■ 「chooseHand」メソッドをオーバライドして作成してください。
     // ※ Hint
@@ -42,12 +43,6 @@ public class AutoRpsPlayer extends Player implements RPSChoosable {
      *
      * @return じゃんけんの手
      */
-    @Override
-    public int chooseHand() {
-        Map<Integer, String> rps = RockPaperScissors.rps;
 
-        int choice = random.nextInt(rps.keySet().size()) + 1;
-        System.out.println(getName() + "の選択 : " + rps.get(choice));
-        return choice;
-    }
+
 }

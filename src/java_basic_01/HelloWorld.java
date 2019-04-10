@@ -9,12 +9,5 @@ package java_basic_01;
 public class HelloWorld {
 
     // ■ "Hello World"を標準出力してください。
-    /**
-     * 処理を実行するためのメインメソッド。
-     *
-     * @param args -
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
+
 }

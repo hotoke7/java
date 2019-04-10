@@ -18,14 +18,16 @@ public class RockPaperScissors {
     /** スキャナ */
     private Scanner scan = new Scanner(System.in);
 
-    // ■ 「play」メソッドに引数を追加してください。
+    // ■ 「play」メソッドに引数を以下の通り追加してください。
+    // 引数1：Player ユーザー
+    // 引数2：Player コンピューター
     /**
      * じゃんけんを行い、結果を標準出力する。
      *
      * @param you      ユーザー
      * @param computer コンピューター
      */
-    public void play(Player you, Player computer) {
+    public void play() {
         // グー」「パー」「チョキ」の文字列を配列に格納します。
         String[] rps = new String[3];
         rps[0] = "グー";
@@ -67,26 +69,32 @@ public class RockPaperScissors {
             if (yourChoice == 0) {
                 if (computersChoice == 1) {
                     System.out.println("負けました…");
-                    computer.win();
+
+
                 } else {
                     System.out.println("勝ちました！");
-                    you.win();
+
+
                 }
             } else if (yourChoice == 1) {
                 if (computersChoice == 2) {
                     System.out.println("負けました…");
-                    computer.win();
+
+
                 } else {
                     System.out.println("勝ちました！");
-                    you.win();
+
+
                 }
             } else {
                 if (computersChoice == 0) {
                     System.out.println("負けました…");
-                    computer.win();
+
+
                 } else {
                     System.out.println("勝ちました！");
-                    you.win();
+
+
                 }
             }
         }

@@ -20,14 +20,14 @@ public class GameManager {
 
         // ■ ユーザーを示す、ManualPlayerクラスのインスタンスを生成してください。
         // 引数はscan.next()としてください。
-        ManualRpsPlayer you = new ManualRpsPlayer(scan.next());
+
 
         // ■ コンピューターを示す、AutoPlayerクラスのインスタンスを生成してください。
         // 引数は自由です。
-        AutoRpsPlayer computer = new AutoRpsPlayer("コンピューター");
+
 
         // ■ ゲーム記録を格納する、「GameRecord」クラスのリストを宣言してください。
-        List<GameRecord> gameRecords = new ArrayList<>();
+
 
         // じゃんけんゲームを行う、RockPaperScissorsクラスのインスタンス
         RockPaperScissors rockPaperScissors = new RockPaperScissors();
@@ -36,19 +36,15 @@ public class GameManager {
         while (true) {
             // ■ 「RockPaperScissors」クラスの「play」メソッドを呼び出し、じゃんけん対決を行ってください。
             // ■ 「play」メソッドの返却値を、「GameRecord」クラスのリストに格納してください。
-            GameRecord gameRecord = rockPaperScissors.play(you, computer);
-            gameRecords.add(gameRecord);
+
 
             System.out.println("======================================");
 
             // ■ 「isGameOver」メソッドを呼び出し、結果に応じて以下の通り処理を行ってください。
             //   - trueの場合：繰り返しを終了し、reportMatchResult」メソッドを呼び出す。
             //   - falseの場合：繰り返しを継続する。
-            boolean isGameOver = isGameOver(you, computer);
-            if (isGameOver) {
-                reportMatchResult(gameRecords, you, computer);
-                break;
-            }
+
+
         }
     }
 
@@ -68,35 +64,21 @@ public class GameManager {
      * @param computer コンピューター
      * @return ゲームの終了判定結果 true:ゲームを終了する false:ゲームを継続する
      */
-    public static boolean isGameOver(ManualRpsPlayer you, AutoRpsPlayer computer) {
-        int yourWinCount = you.getWinCount();
-        int computersWinCount = computer.getWinCount();
 
-        if (yourWinCount == 2 || computersWinCount == 2) {
-            return true;
-        }
-        return false;
-    }
 
     // 【問題】ゲームの結果を出力する「reportMatchResult」メソッドを完成してください。
     // ■ 「reportMatchResult」メソッドの引数を以下の通り変更してください。
     // 引数1：「GameRecord」クラスのリスト ゲーム記録一覧
     // 引数2：ManualRpsPlayer ユーザー
     // 引数3：AutoRpsPlayer コンピューター
-    /**
-     * ゲームの記録を出力し、勝者を表示する。
-     *
-     * @param gameRecords ゲーム記録一覧
-     * @param you         ユーザー
-     * @param computer    コンピューター
-     */
-    public static void reportMatchResult(List<GameRecord> gameRecords, ManualRpsPlayer you, AutoRpsPlayer computer) {
+    public static void reportMatchResult() {
 
         // ■ ゲーム回数を示す整数型の変数を宣言し、1で初期化してください。
-        int gameCount = 1;
+
 
         // ■ ゲーム記録出力の開始アナウンスを標準出力してください。内容は自由です。
-        System.out.println("Game Result");
+
+
         // 区切り線の出力
         System.out.println("======================================");
 
@@ -117,22 +99,12 @@ public class GameManager {
         //   テストユーザ：パー
         //   コンピューター：グー
         //   対戦結果：○
-        for (GameRecord gameRecord : gameRecords) {
-            System.out.println(gameCount + "回戦");
-            System.out.println(you.getName() + "：" + gameRecord.getYourHand());
-            System.out.println(computer.getName() + "：" + gameRecord.getComputersHand());
-            System.out.println("対戦結果：" + gameRecord.getGameResult());
-            gameCount += 1;
-            System.out.println("======================================");
-        }
+
 
         // ■ 勝利したユーザーを出力する処理を作成してください。
         // 出力結果（サンプル）：
         // 勝者：テストユーザ
-        if (computer.getWinCount() == 2) {
-            System.out.println("勝者：" + computer.getName());
-        } else {
-            System.out.println("勝者：" + you.getName());
-        }
+
+
     }
 }
