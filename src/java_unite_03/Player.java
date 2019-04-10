@@ -39,7 +39,7 @@ public class Player {
     /**
      * 名前を返却する。
      *
-     * @return 文字列 名前
+     * @return 名前
      */
     public String getName() {
         return name;
@@ -48,7 +48,7 @@ public class Player {
     /**
      * 勝利回数を返却する。
      *
-     * @return 整数型 勝利回数
+     * @return 勝利回数
      */
     public int getWinCount() {
         return winCount;

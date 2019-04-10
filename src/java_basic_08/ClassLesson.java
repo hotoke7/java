@@ -9,7 +9,7 @@ package java_basic_08;
 public class ClassLesson {
 
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */

@@ -14,9 +14,9 @@ import java.util.Scanner;
 public class RockPaperScissors {
 
     /** ランダム */
-    static Random random = new Random();
+    private static Random random = new Random();
     /** スキャナ */
-    static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
 
     /**
      * じゃんけんゲームを実行するメインメソッド。

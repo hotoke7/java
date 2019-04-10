@@ -9,7 +9,7 @@ package java_basic_10;
 public class InterfaceLesson {
 
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */

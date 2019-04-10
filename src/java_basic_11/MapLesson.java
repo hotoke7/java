@@ -11,8 +11,9 @@ import java.util.Map;
  * 処理にはPetクラスを使用します。
  */
 public class MapLesson {
+
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */

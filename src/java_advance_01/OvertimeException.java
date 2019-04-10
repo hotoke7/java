@@ -1,11 +1,11 @@
 package java_advance_01;
 
 /**
- * 勤務時間が規定時間を超過したことを表す例外クラス。
+ * 残業を示す例外。
  */
 public class OvertimeException extends Exception {
     /**
-     * オーバータイムが発生した場合発生する例外
+     * コンストラクタ。
      *
      * @param message -
      */

@@ -1,11 +1,11 @@
 package java_advance_01;
 
 /**
- * 勤務時間が規定時間未満のことを表す例外クラス。
+ * 早退を示す例外。
  */
 public class EarlyLeaveException extends Exception {
     /**
-     * 早退が発生した場合発生する例外。
+     * コンストラクタ。
      *
      * @param message -
      */

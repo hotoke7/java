@@ -9,8 +9,9 @@ package java_advance_01;
  * 出力結果はWikiを参照してください。
  */
 public class ExceptionLesson {
+
     /**
-     * 整数の内容に応じて、標準出力処理または例外処理をを行う。
+     * 整数の内容に応じて、標準出力処理または例外処理を行う。
      *
      * @param args -
      */

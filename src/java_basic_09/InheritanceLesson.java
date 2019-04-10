@@ -9,7 +9,7 @@ package java_basic_09;
 public class InheritanceLesson {
 
     /**
-     * 処理を実行するためのメインメソッド
+     * 処理を実行するためのメインメソッド。
      *
      * @param args -
      */
