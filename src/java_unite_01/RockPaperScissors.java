@@ -3,15 +3,27 @@ package java_unite_01;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Lesson Java一貫① じゃんけんゲーム①
+ * <p>
+ * じゃんけんクラス。
+ * <p>
+ * 【問題】
+ * 一発勝負のじゃんけんゲームを作成してください。
+ */
 public class RockPaperScissors {
 
-    static Random random = new Random();
-    static Scanner scan = new Scanner(System.in);
+    /** ランダム */
+    private static Random random = new Random();
+    /** スキャナ */
+    private static Scanner scan = new Scanner(System.in);
 
+    /**
+     * じゃんけんゲームを実行するメインメソッド。
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
-        // Lesson Java一貫① じゃんけんゲーム①
-        // 【問題】一発勝負のじゃんけんゲームを作成してください。
-
         // ■ ユーザーの選択値を格納する、整数型の変数を宣言してください。
         int yourChoice;
 

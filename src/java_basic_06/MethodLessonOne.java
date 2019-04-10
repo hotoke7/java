@@ -2,14 +2,24 @@ package java_basic_06;
 
 import java.util.Scanner;
 
+/**
+ * Lesson Java基礎⑥（メソッド）１
+ * <p>
+ * 【問題】
+ * 以下の動作をする機能を作成してください。
+ *     ・入力された数値が素数かを判別する。
+ *     ・結果を標準出力する。
+ * 以下の手順に従って作成してください
+ *     1．メソッド作成
+ *     2. メソッド呼び出し
+ */
 public class MethodLessonOne {
-    // Lesson Java基礎⑥（メソッド）
-    // 【問題】以下の動作をする機能を作成してください。
-    // ・入力された数値が素数かを判別する。
-    // ・結果を標準出力する。
-    // 以下の手順に従って作成してください
-    // 1．メソッド作成
-    // 2. メソッド呼び出し
+
+    /**
+     * 処理を実行するためのメインメソッド。
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
 
         // 標準入力。入力された数字は、変数「number」に収納されます
@@ -24,9 +34,11 @@ public class MethodLessonOne {
 
     // 1．メソッド作成
     // ■ 以下の動作をするメソッドを作成してください
-    // 引数1：int 判定対象の数値
-    // 動作：引数が素数を判定し、結果を標準出力する。
-    // 返却値：なし
+    /**
+     * 引数が素数かを判定し、判定結果を標準出力する。
+     *
+     * @param number 判定対象の数値
+     */
     public static void isPrimeNumber(int number) {
         boolean isPrimeNumber = true;
 

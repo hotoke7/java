@@ -3,18 +3,30 @@ package java_unite_02;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * じゃんけんクラス。
+ * <p>
+ * Lesson Java一貫② じゃんけんゲーム②
+ * <p>
+ * 【問題】
+ * playメソッドを完成してください。
+ */
 public class RockPaperScissors {
+
+    /** ランダム */
     private Random random = new Random();
+    /** スキャナ */
     private Scanner scan = new Scanner(System.in);
 
-    // Lesson Java一貫② じゃんけんゲーム②
-    // 【問題】以下のソースコードをもとに、playメソッドを完成してください。
-
     // ■ 「play」メソッドに引数を追加してください。
-    // 引数1：Player ユーザー
-    // 引数2：Player コンピューター
+    /**
+     * じゃんけんを行い、結果を標準出力する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     */
     public void play(Player you, Player computer) {
-        // サイズが３の文字列の配列を宣言し、「グー」「パー」「チョキ」の文字列を配列に格納します。
+        // グー」「パー」「チョキ」の文字列を配列に格納します。
         String[] rps = new String[3];
         rps[0] = "グー";
         rps[1] = "パー";
@@ -22,7 +34,7 @@ public class RockPaperScissors {
 
         System.out.println("以下の選択肢の中で一つを選んでください。");
 
-        // 配列を繰り返し、配列の値を標準出力します。
+        // 配列を繰り返し、配列の値を標準出力する。
         for (int i = 0; i < rps.length; i++) {
             System.out.println(i + "：" + rps[i]);
         }

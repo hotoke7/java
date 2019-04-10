@@ -1,16 +1,25 @@
 package java_basic_10;
 
+/**
+ * Java基礎⑩（インターフェース）
+ * <p>
+ * 【問題】
+ * 作成した各クラスを使用して、リモコンを操作してください。
+ */
 public class InterfaceLesson {
-    public static void main(String[] args) {
-        // Java基礎⑩（インターフェース）
-        // 【問題】作成した各クラスを使って、リモコンを操作してみましょう。
 
+    /**
+     * 処理を実行するためのメインメソッド。
+     *
+     * @param args -
+     */
+    public static void main(String[] args) {
         // ■ RemoteControlインタフェースで実装したクラスのインスタンスを生成してください。
         LightRemoteControl lightRemoteControl = new LightRemoteControl();
         TVRemoteControl tvRemoteControl = new TVRemoteControl();
         SpeakerRemoteControl speakerRemoteControl = new SpeakerRemoteControl();
 
-        // 作成したインスタンスでメソッドを使ってみましょう。
+        // 生成したインスタンスのメソッドを使用してください。
         // 出力結果より、同じメソッドを使ったのに結果が異なることが確認できます。
 
         // ■ 電気とテレビ、スピーカーの電源をつけてください。

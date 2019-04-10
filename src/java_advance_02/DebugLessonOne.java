@@ -3,12 +3,16 @@ package java_advance_02;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Lesson Java応用②（デバッグ）
+ * <p>
+ * 【問題】
+ * 以下のソースコードに潜んでいるバグを修正してください。
+ */
 public class DebugLessonOne {
 
-    // Lesson Java応用②（デバッグ）
-    // ■ 以下のソースコードに潜んでいるバグを修正してください。
     /**
-     * 文字列の内容に応じて、標準出力処理を行う。
+     * 標準出力処理を行う。
      *
      * @param args -
      */
@@ -30,8 +34,8 @@ public class DebugLessonOne {
     }
 
     /**
-     * 引数の文字列リストの内容に応じて、標準出力処理を行う。
-     *
+     * 文字列リストの内容に応じて、標準出力処理を行う。
+     * <p>
      * ・文字列の先頭4桁が「LIST」の場合、5桁目以後の文字列を標準出力
      * ・文字列の先頭4桁が「LIST」ではない場合、「不正データ」を標準出力
      *

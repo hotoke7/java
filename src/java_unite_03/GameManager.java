@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * ゲームマネージャクラス。
+ * <p>
+ * Lesson Java一貫③ じゃんけんゲーム③
+ * <p>
+ * 【問題】
+ * mainメソッドを完成させてください。
+ */
 public class GameManager {
     private static Scanner scan = new Scanner(System.in);
 
@@ -44,17 +52,22 @@ public class GameManager {
         }
     }
 
-    // 【問題】「isGameOver」メソッドを以下のように作成してください。
-    // 引数1：ManualRpsPlayer ユーザー
-    // 引数2：AutoRpsPlayer コンピューター
-    // 返却値：真偽値 ゲームを終了するかどうか
-    //   ・true ゲームを終了する
-    //   ・false ゲームを継続する
-    // 動作：ユーザー、コンピューターの勝利回数に応じて、以下の動作を行う。
-    // ・ユーザー、またはコンピューターのいずれかの勝利回数が2の場合
-    //   trueを返却する。
-    // ・それ以外
-    //   falseを返却する。
+    // 【問題】以下の動作をする「isGameOver」メソッドを作成してください。
+    /**
+     * ゲームが終了したかを判定する。
+     * <p>
+     * ユーザー、コンピューターの勝利回数に応じて、以下の通り処理を行う。
+     * <p>
+     * ・ユーザー、またはコンピューターのいずれかの勝利回数が2の場合
+     * 　ゲーム終了のため、trueを返却する。
+     * <p>
+     * ・上記以外
+     * 　ゲーム継続のため、falseを返却する。
+     *
+     * @param you      ユーザー
+     * @param computer コンピューター
+     * @return ゲームの終了判定結果 true:ゲームを終了する false:ゲームを継続する
+     */
     public static boolean isGameOver(ManualRpsPlayer you, AutoRpsPlayer computer) {
         int yourWinCount = you.getWinCount();
         int computersWinCount = computer.getWinCount();
@@ -66,12 +79,17 @@ public class GameManager {
     }
 
     // 【問題】ゲームの結果を出力する「reportMatchResult」メソッドを完成してください。
-    // ■ 「reportMatchResult」メソッドを以下の通り修正してください。
+    // ■ 「reportMatchResult」メソッドの引数を以下の通り変更してください。
     // 引数1：「GameRecord」クラスのリスト ゲーム記録一覧
     // 引数2：ManualRpsPlayer ユーザー
     // 引数3：AutoRpsPlayer コンピューター
-    // 動作：すべてのゲームの記録を出力し、勝者を表示。
-    // 返却値：なし
+    /**
+     * ゲームの記録を出力し、勝者を表示する。
+     *
+     * @param gameRecords ゲーム記録一覧
+     * @param you         ユーザー
+     * @param computer    コンピューター
+     */
     public static void reportMatchResult(List<GameRecord> gameRecords, ManualRpsPlayer you, AutoRpsPlayer computer) {
 
         // ■ ゲーム回数を示す整数型の変数を宣言し、1で初期化してください。

@@ -4,16 +4,20 @@ package java_unite_03;
  * ゲーム結果格納クラス。
  */
 public class GameRecord {
+
+    /** ユーザの手 */
     private String yourHand;
+    /** コンピュータの手 */
     private String computersHand;
+    /** ゲーム結果 */
     private String gameResult;
 
     /**
      * 初期化処理。
      *
-     * @param yourHand ユーザの手（グー、パー、チョキ）
+     * @param yourHand      ユーザの手（グー、パー、チョキ）
      * @param computersHand コンピュータの手（グー、パー、チョキ）
-     * @param gameResult ゲーム結果（○、△、×）
+     * @param gameResult    ゲーム結果（○、△、×）
      */
     public GameRecord(String yourHand, String computersHand, String gameResult) {
         this.yourHand = yourHand;

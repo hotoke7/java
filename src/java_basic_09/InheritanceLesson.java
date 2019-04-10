@@ -1,9 +1,18 @@
 package java_basic_09;
 
+/**
+ * Lesson Java基礎⑨（継承）
+ * <p>
+ * 【問題】
+ * 作成した各クラスを使って、継承の実習を行ってください。
+ */
 public class InheritanceLesson {
-    // Lesson Java基礎⑨（継承）
-    // 【問題】作成した各クラスを使って、継承の実習を行ってください。
 
+    /**
+     * 処理を実行するためのメインメソッド。
+     *
+     * @param args -
+     */
     public static void main(String[] args) {
         // PayPhone、SmartPhoneの電話番号
         String payPhoneNumber = "080-1111-1111";
