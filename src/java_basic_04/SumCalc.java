@@ -16,9 +16,7 @@ public class SumCalc {
     public static void main(String[] args) {
         // ■ 結果格納用変数の宣言してください。
 
-
         // ■ 繰り返し処理を記述してください。
-
 
         // ■ 結果を標準出力してください。
         // 想定出力結果

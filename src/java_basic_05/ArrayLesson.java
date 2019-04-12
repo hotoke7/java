@@ -16,9 +16,7 @@ public class ArrayLesson {
     public static void main(String[] args) {
         // ■ 飲み物を格納する配列を宣言してください。
 
-
         // ■ 1杯目から5杯目までの飲み物を配列に代入してください。
-
 
         // ■ 想定する結果が出るように、標準出力をしてください。
         // 想定出力結果：
