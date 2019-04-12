@@ -35,13 +35,14 @@ public class GameManager {
         System.out.println("じゃんけんゲームを始めます。");
         while (true) {
             // ■ 「RockPaperScissors」クラスの「play」メソッドを呼び出し、じゃんけん対決を行ってください。
+
             // ■ 「play」メソッドの返却値を、「GameRecord」クラスのリストに格納してください。
 
 
             System.out.println("======================================");
 
             // ■ 「isGameOver」メソッドを呼び出し、結果に応じて以下の通り処理を行ってください。
-            //   - trueの場合：繰り返しを終了し、reportMatchResult」メソッドを呼び出す。
+            //   - trueの場合：「reportMatchResult」メソッドを呼び出す。その後、繰り返しを終了させる。
             //   - falseの場合：繰り返しを継続する。
 
 
