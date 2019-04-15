@@ -52,7 +52,7 @@ public class RockPaperScissors {
         System.out.println("あなたの選択 : " + rps[yourChoice]);
         System.out.println("コンピュータの選択 : " + rps[computersChoice]);
 
-        // ■ 以下のコードに、じゃんけんの結果によってプレイヤーインスタンスの値を変更する機能を追加してください。
+        // ■ 以下のコードに、じゃんけんの結果によってプレイヤーの勝利回数を変更するロジックを追加してください。
         // 機能詳細：
         //   ユーザーが勝った場合：
         //     動作：ユーザーの勝利回数を＋1とする。
