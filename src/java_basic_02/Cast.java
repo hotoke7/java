@@ -20,5 +20,6 @@ public class Cast {
         int intValue = (int)x;
         // ■ xを整数型にキャストし、処理結果を標準出力してください。
         System.out.println(intValue);
+        System.out.println("hello");
     }
 }
