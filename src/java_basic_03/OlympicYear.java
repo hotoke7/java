@@ -15,10 +15,14 @@ public class OlympicYear {
      */
     public static void main(String[] args) {
         // ■ 2019年を格納する変数を宣言してください。
-
+        int year = 2019;
 
         // ■ 判定の条件分岐と条件式を書いて、標準出力してください。
-
+        if (year % 4 = 0 || year % 4 = 2){
+            System.out.println(year + "年は、オリンピックが開催されます");
+        } else {
+            System.out.println(year + "年は、オリンピックが開催されません");
+        }
 
         // ■ 2020年を格納する変数を宣言してください。
 

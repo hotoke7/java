@@ -9,5 +9,7 @@ package java_basic_01;
 public class HelloWorld {
 
     // ■ "Hello World"を標準出力してください。
-
+    public static void main (String[] args){
+        System.out.println("Hello Rakuten!");
+    }
 }
