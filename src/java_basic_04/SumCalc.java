@@ -1,5 +1,7 @@
 package java_basic_04;
 
+import java.sql.SQLOutput;
+
 /**
  * Lesson Java基礎④（繰り返し）
  * <p>
@@ -14,13 +16,30 @@ public class SumCalc {
      * @param args -
      */
     public static void main(String[] args) {
-        // ■ 結果格納用変数の宣言してください。
+//        // ■ 結果格納用変数の宣言してください。
+//        int sum = 0;
+//        // ■ 繰り返し処理を記述してください。
+//        for (int i = 1; i <= 100; i++){
+//            sum += i;
+//        }
+//        // ■ 結果を標準出力してください。
+//        // 想定出力結果
+//        // 1から100までの合計は、5050です。
+//        System.out.println("1から100までの合計は、" + sum + "です。");
 
-        // ■ 繰り返し処理を記述してください。
-
-        // ■ 結果を標準出力してください。
-        // 想定出力結果
-        // 1から100までの合計は、5050です。
-
+        for (int i = 1; i <= 100; i++){
+            if (i % 3 == 0 && i % 5 == 0){
+                System.out.println(i + ": FizzBuzz");
+            } else if (i % 5 == 0) {
+                System.out.println(i + ": Buzz");
+            } else if (i % 3 == 0){
+                System.out.println(i + ": Fizz");
+            } else {
+                System.out.println(i + ":");
+            }
+        }
     }
+
+
 }
+
