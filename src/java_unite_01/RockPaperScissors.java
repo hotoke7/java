@@ -1,5 +1,6 @@
 package java_unite_01;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -59,7 +60,7 @@ public class RockPaperScissors {
         //    現在の設定値「0」を、配列の長さに変更してください。
         //    また、ソースコードの返却値をコンピューターの選択を示す変数に格納してください。
 //        random.nextInt(2);
-        int comNum = random.nextInt(3);
+        int comNum = random.nextInt(rps.length);
         // 標準入力の為のガイドメッセージを出力します。
         // ■ 以下の文字列を標準出力してください。
         // 番号を入力してください：
@@ -67,13 +68,30 @@ public class RockPaperScissors {
         System.out.println("番号を入力してください:");
         int oppNum = scan.nextInt();
 
-        while (oppNum > 2){
-            System.out.println("0～2の中から選択してください。");
-            System.out.println("番号を入力してください:");
-            oppNum = scan.nextInt();
 
+
+//        try{
+//            System.out.println("あなたの選択：" + rps[oppNum] );
+//        }catch(InputMismatchException e){
+//            System.out.println("0～2の中から選択してください。");
+//        }
+
+
+        while (true){
+            if (oppNum > 2){
+                System.out.println("0～2の中から選択してください。");
+                System.out.println("番号を入力してください:");
+                oppNum = scan.nextInt();
+            } else if (oppNum <= 2){
+                System.out.println("あなたの選択：" + rps[oppNum] );
+            } else {
+                System.out.println("0～2の中から選択してください。");
+                System.out.println("番号を入力してください:");
+                oppNum = scan.nextInt();
+            }
+            break;
         }
-        scan.close();
+//        scan.close();
 //        if (oppNum > 2){
 //
 //        }
@@ -81,7 +99,7 @@ public class RockPaperScissors {
         // ■ 以下のソースコードは、プログラム実行時にユーザーが画面上で入力した数値を取得できます。
         //    ソースコードの返却値を、ユーザーの選択を示す変数に格納してください。
 
-        System.out.println("あなたの選択：" + rps[oppNum] );
+//        System.out.println("あなたの選択：" + rps[oppNum] );
         System.out.println("コンピューターの選択：" + rps[comNum]);
 
 
