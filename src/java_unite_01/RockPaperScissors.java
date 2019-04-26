@@ -58,17 +58,31 @@ public class RockPaperScissors {
         // ■ 以下のソースコードは指定した数値分の整数をランダムで返却します。
         //    現在の設定値「0」を、配列の長さに変更してください。
         //    また、ソースコードの返却値をコンピューターの選択を示す変数に格納してください。
-        random.nextInt(3);
-
+//        random.nextInt(2);
+        int comNum = random.nextInt(3);
         // 標準入力の為のガイドメッセージを出力します。
         // ■ 以下の文字列を標準出力してください。
         // 番号を入力してください：
-        System.out.println("番号を入力してください:");
 
+        System.out.println("番号を入力してください:");
+        int oppNum = scan.nextInt();
+
+        while (oppNum > 2){
+            System.out.println("0～2の中から選択してください。");
+            System.out.println("番号を入力してください:");
+            oppNum = scan.nextInt();
+
+        }
+        scan.close();
+//        if (oppNum > 2){
+//
+//        }
         // ユーザーが出す手を決めます。
         // ■ 以下のソースコードは、プログラム実行時にユーザーが画面上で入力した数値を取得できます。
         //    ソースコードの返却値を、ユーザーの選択を示す変数に格納してください。
-        scan.nextInt();
+
+        System.out.println("あなたの選択：" + rps[oppNum] );
+        System.out.println("コンピューターの選択：" + rps[comNum]);
 
 
         //=======================================================================================
@@ -91,7 +105,17 @@ public class RockPaperScissors {
         //     負けました…
         //   無勝負の場合：
         //     あいこです。
-
+        if (oppNum == comNum){
+            System.out.println("あいこです。");
+        } else if ((oppNum == 0 && comNum == 1) || (oppNum == 1 && comNum ==2) || (oppNum == 2 && comNum == 0)) {
+            System.out.println("勝ちました！");
+        } else {
+            System.out.println("負けました…");
+        }
 
     }
+
+    //   0  : グー
+    //   1  : パー
+    //   2  : チョキ
 }
