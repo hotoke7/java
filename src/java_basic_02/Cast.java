@@ -20,6 +20,9 @@ public class Cast {
 
         // ■ xを整数型にキャストし、処理結果を標準出力してください。
         System.out.println((int)x);
-
+        int i;
+        for (i=2; i < 10; i+=2) {
+            System.out.println(i);
+        }
     }
 }
