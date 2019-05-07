@@ -60,6 +60,8 @@ public class RockPaperScissors {
         //     動作：コンピューターの勝利回数を＋1とする。
         //   無勝負の場合：
         //     動作：なし
+
+
         if (yourChoice == computersChoice) {
             System.out.println("あいこです。");
         } else {
